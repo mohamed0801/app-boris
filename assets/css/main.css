@@ -1214,6 +1214,8 @@ section,
   min-width: 1200px;
   position: relative;
   padding-top: 20px;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
 .timeline-item {
