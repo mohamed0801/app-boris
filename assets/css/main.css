@@ -13,14 +13,14 @@
 /* Fonts */
 @font-face {
   font-family: "circular-std-medium-500";
-  src: url("/assets/fonts/circular-std-medium-500.ttf") format("truetype");
+  src: url("../fonts/circular-std-medium-500.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 :root {
   --default-font: "circular-std-medium-500", sans-serif;
   --heading-font: "circular-std-medium-500", sans-serif;
-  --nav-font: "circular-std-medium-500", sans-serif;
+  --nav-font: "circular-std-medium-500" sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -957,32 +957,32 @@ section,
 /*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
-.featured-services {
+.valors {
   padding: 40px 0 10px 0;
 }
 
-.featured-services .service-item {
+.valors .service-item {
   position: relative;
   height: 100%;
   margin-bottom: 30px;
 }
 
-.featured-services .service-item .icon {
+.valors .service-item .icon {
   margin-right: 20px;
 }
 
-.featured-services .service-item .icon i {
+.valors .service-item .icon i {
   color: var(--accent-color);
   font-size: 40px;
-  line-height: 0;
+  line-height: 1;
   transition: 0.3s;
 }
 
-.featured-services .service-item:hover .icon i {
+.valors .service-item:hover .icon i {
   color: var(--accent-color);
 }
 
-.featured-services .service-item .title {
+.valors .service-item .title {
   color: var(--heading-color);
   font-weight: 700;
   margin-bottom: 10px;
@@ -990,13 +990,13 @@ section,
   transition: 0.3s;
 }
 
-.featured-services .service-item .description {
+.valors .service-item .description {
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 10px;
 }
 
-.featured-services .service-item .readmore {
+.valors .service-item .readmore {
   display: flex;
   align-items: center;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
@@ -1005,14 +1005,114 @@ section,
   font-size: 14px;
 }
 
-.featured-services .service-item .readmore i {
+.valors .service-item .readmore i {
   margin-left: 8px;
 }
 
-.featured-services .service-item:hover .title,
-.featured-services .service-item:hover .readmore,
-.featured-services .service-item:hover .icon i {
+.valors .service-item:hover .title,
+.valors .service-item:hover .readmore,
+.valors .service-item:hover .icon i {
   color: var(--accent-color);
+}
+/*--------------------------------------------------------------
+# Engagement Section
+--------------------------------------------------------------*/
+.modern-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f5f7fa);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-bottom: 25px;
+  height: 100%;
+}
+
+.card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #28a745, #52de97);
+}
+
+.modern-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(40, 167, 69, 0.2);
+}
+
+.modern-card:hover .icon-container {
+  transform: rotate(360deg);
+  background: #28a745;
+  color: white;
+}
+
+.modern-card .card-body {
+  padding: 35px 25px 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(40, 167, 69, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.5s ease;
+  color: #28a745;
+  font-size: 24px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #212529;
+  text-align: center;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.card-title:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: #28a745;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.card-text {
+  font-size: 15px;
+  color: #6c757d;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Animation au chargement */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modern-card {
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
 /*--------------------------------------------------------------
@@ -1034,16 +1134,242 @@ section,
   padding: 0;
 }
 
-.about .content ul li {
-  padding-bottom: 10px;
-}
-
 .about .content ul i {
   font-size: 1.25rem;
   margin-right: 4px;
   color: var(--accent-color);
 }
+.methodology-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
 
+.methodology-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.methodology-list i {
+  color: #28a745;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.methodology-list span {
+  display: inline-block;
+}
+
+.methodology-list span strong {
+  color: #212529;
+  font-weight: 600;
+}
+.methodology-div {
+  padding: 80px 0;
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+.section-heading {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-heading h2 {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  color: var(--heading-color);
+}
+
+/* Timeline Horizontal */
+.horizontal-timeline {
+  position: relative;
+  padding: 20px 0;
+  overflow-x: auto;
+}
+
+/* Ligne horizontale principale - ajusté pour traverser tous les numéros */
+.horizontal-timeline:before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.timeline-wrapper {
+  display: flex;
+  min-width: 1200px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.timeline-item {
+  flex: 1;
+  position: relative;
+  padding: 5px;
+}
+
+.timeline-number {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 0 5px 15px rgba(24, 210, 110, 0.3);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-number {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.timeline-content {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: var(--surface-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 220px;
+  text-align: center;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Flèche pointant vers le numéro */
+.timeline-content:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--surface-color);
+}
+
+.timeline-content h3 {
+  color: var(--heading-color);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.timeline-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--default-color);
+  margin-bottom: 0;
+}
+
+/* Styles responsive */
+@media (max-width: 991px) {
+  .timeline-wrapper {
+    flex-direction: column;
+    min-width: auto;
+  }
+
+  .horizontal-timeline:before {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 25px;
+  }
+
+  .timeline-item {
+    padding: 0 0 30px 50px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-number {
+    left: 25px;
+    top: 0;
+    transform: none;
+  }
+
+  .timeline-item:hover .timeline-number {
+    transform: scale(1.1);
+  }
+
+  .timeline-content {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  .timeline-content:before {
+    left: 0;
+    top: 15px;
+    transform: rotate(90deg);
+  }
+}
+
+/* Styles pour la section d'images */
+.methodology-images {
+  margin-top: 50px;
+}
+
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.img-overlay img {
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.img-overlay:hover img {
+  transform: scale(1.05);
+}
+
+.img-number {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  z-index: 1;
+}
 .about .content p:last-child {
   margin-bottom: 0;
 }
@@ -1077,6 +1403,10 @@ section,
 
 .about .content .read-more:hover i {
   margin-left: 10px;
+}
+
+.about .about-images {
+  margin-top: 170px; /* ajuste la valeur selon le rendu */
 }
 
 .about .about-images img {
@@ -1119,7 +1449,7 @@ section,
 
 .services .service-item .icon {
   font-size: 36px;
-  line-height: 0;
+  line-height: 1;
   margin-right: 30px;
   color: var(--accent-color);
 }
@@ -1139,6 +1469,10 @@ section,
   font-size: 14px;
   margin: 0;
 }
+.services .service-item .description i {
+  font-size: 15px;
+  font-weight: bold;
+}
 
 .services .service-item:hover {
   border-color: var(--accent-color);
@@ -1147,6 +1481,37 @@ section,
 .services .service-item:hover .title a {
   color: var(--accent-color);
 }
+/*
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.service-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.service-list i {
+  color: #28a745;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.service-list span {
+  display: inline-block;
+}
+
+.service-list span strong {
+  color: #212529;
+  font-weight: 600;
+} */
 
 /*--------------------------------------------------------------
 # Call To Action Section
@@ -1408,7 +1773,11 @@ section,
 # Team Section
 --------------------------------------------------------------*/
 .team {
-  --default-color: #ffffff;
+  color: #ffffff;
+}
+
+.team .section-title p {
+  color: var(--default-color);
 }
 
 .team .member {
@@ -1462,7 +1831,7 @@ section,
 
 .team .member .social a {
   transition: 0.3s;
-  color: var(--default-color);
+  color: #ffffff;
 }
 
 .team .member .social a:hover {
