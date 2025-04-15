@@ -28,18 +28,37 @@
 
   document.addEventListener("scroll", toggleScrolled);
   window.addEventListener("load", toggleScrolled);
-
   /**
-   * Mobile nav toggle
+   * Mobile Navigation
    */
   const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
+  const mobileLogo = document.querySelector(".mobile-logo");
 
   function mobileNavToogle() {
+    // Cacher immédiatement le logo avant tout autre changement
+    if (mobileLogo) {
+      mobileLogo.style.display = "none";
+    }
+
+    // Appliquer ensuite les autres changements
     document.querySelector("body").classList.toggle("mobile-nav-active");
     mobileNavToggleBtn.classList.toggle("bi-list");
     mobileNavToggleBtn.classList.toggle("bi-x");
+
+    // Si on ferme le menu, réafficher le logo après un court délai
+    if (
+      !document.querySelector("body").classList.contains("mobile-nav-active") &&
+      mobileLogo
+    ) {
+      setTimeout(() => {
+        mobileLogo.style.display = "";
+      }, 300); // Délai pour laisser l'animation de fermeture se terminer
+    }
   }
-  mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
+
+  if (mobileNavToggleBtn) {
+    mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -49,18 +68,6 @@
       if (document.querySelector(".mobile-nav-active")) {
         mobileNavToogle();
       }
-    });
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll(".navmenu .toggle-dropdown").forEach((navmenu) => {
-    navmenu.addEventListener("click", function (e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle("active");
-      this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
-      e.stopImmediatePropagation();
     });
   });
 
@@ -238,29 +245,104 @@
   /**
    * Navmenu Scrollspy
    */
-  let navmenulinks = document.querySelectorAll(".navmenu a");
 
-  function navmenuScrollspy() {
-    navmenulinks.forEach((navmenulink) => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (
-        position >= section.offsetTop &&
-        position <= section.offsetTop + section.offsetHeight
-      ) {
-        document
-          .querySelectorAll(".navmenu a.active")
-          .forEach((link) => link.classList.remove("active"));
-        navmenulink.classList.add("active");
-      } else {
-        navmenulink.classList.remove("active");
+  document.addEventListener("DOMContentLoaded", function () {
+    // Sélectionner tous les liens de navigation
+    const navLinks = document.querySelectorAll(
+      ".nav-left ul li a, .nav-right ul li a"
+    );
+
+    // Récupérer les sections cibles à partir des liens (href des liens)
+    const sections = [];
+    navLinks.forEach((link) => {
+      const href = link.getAttribute("href");
+      // Vérifier si le href est une ancre vers une section
+      if (href && href.startsWith("#") && href.length > 1) {
+        const section = document.querySelector(href);
+        if (section) {
+          sections.push(section);
+        }
       }
     });
-  }
-  window.addEventListener("load", navmenuScrollspy);
-  document.addEventListener("scroll", navmenuScrollspy);
+
+    // Fonction pour déterminer quelle section est actuellement visible
+    function getCurrentSection() {
+      // Position de défilement actuelle (haut de l'écran) + une marge
+      const scrollPosition = window.scrollY + 100; // 100px de marge pour considérer la section comme active un peu avant
+
+      // Trouver la section actuellement visible
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
+          return section.id;
+        }
+      }
+
+      // Si aucune section n'est trouvée, retourner null
+      return null;
+    }
+
+    // Fonction pour mettre à jour les classes actives des liens
+    function updateActiveLinks() {
+      const currentSectionId = getCurrentSection();
+
+      // Retirer la classe 'active' de tous les liens
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      // Si une section active est trouvée, ajouter la classe 'active' au lien correspondant
+      if (currentSectionId) {
+        navLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+          if (href === `#${currentSectionId}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    }
+
+    // Ajouter un gestionnaire d'événements pour le clic sur les liens
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+
+        if (href && href.startsWith("#") && href.length > 1) {
+          e.preventDefault();
+          const targetSection = document.querySelector(href);
+
+          if (targetSection) {
+            // Option 1: Défilement simple vers la section
+            window.scrollTo({
+              top: targetSection.offsetTop,
+              behavior: "smooth",
+            });
+
+            // Option 2: Si vous utilisez une navigation fixe, vous devrez peut-être ajuster la position
+            // window.scrollTo({
+            //   top: targetSection.offsetTop - HAUTEUR_DE_VOTRE_NAVBAR,
+            //   behavior: 'smooth'
+            // });
+
+            // Mettre à jour les liens actifs après le clic
+            setTimeout(updateActiveLinks, 500);
+          }
+        }
+      });
+    });
+
+    // Écouter l'événement de défilement pour mettre à jour les liens actifs
+    window.addEventListener("scroll", updateActiveLinks);
+
+    // Exécuter la mise à jour initiale
+    updateActiveLinks();
+  });
 
   /* Services details */
 

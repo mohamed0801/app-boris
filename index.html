@@ -51,188 +51,145 @@
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
       >
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">TRALAI</h1>
-        </a>
-
         <nav id="navmenu" class="navmenu">
+          <!-- Version desktop du menu avec logo au centre -->
+          <div class="nav-container">
+            <!-- Liens à gauche du logo -->
+            <div class="nav-left">
+              <ul>
+                <li><a href="#hero" class="active">Menu</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#method">Méthodologie</a></li>
+              </ul>
+            </div>
+
+            <!-- Logo au milieu -->
+            <div class="nav-logo">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename">TRALAI</h1>
+              </a>
+            </div>
+
+            <!-- Liens à droite du logo -->
+            <div class="nav-right">
+              <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Version mobile: bouton toggle à gauche et logo à droite -->
+          <div class="mobile-header">
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            <div class="mobile-logo">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename">TRALAI</h1>
+              </a>
+            </div>
+          </div>
+
+          <!-- Liste pour la version mobile -->
           <ul>
             <li><a href="#hero" class="active">Menu</a></li>
             <li><a href="#about">À Propos</a></li>
+            <li><a href="#method">Méthodologie</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Équipe</a></li>
-            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
       </div>
     </header>
 
     <main class="main">
       <!-- Hero Section -->
-      <section id="hero" class="hero section dark-background">
-        <div
-          id="hero-carousel"
-          class="carousel slide carousel-fade"
-          data-bs-ride="carousel"
-          data-bs-interval="5000"
-        >
-          <div class="carousel-item active">
-            <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="" />
-            <div class="carousel-container">
+      <div id="hero" class="hero-section">
+        <div class="hero-container">
+          <div class="hero-image">
+            <img src="assets/img/menu/menu-img.png" alt="TRALAI studio" />
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
               <h2>Designer votre culture d'entreprise</h2>
               <p>
-                Chaque entreprise a une personnalité unique, une énergie qui se
-                ressent à travers ses valeurs et son image. Chez TRALAI, nous
-                captons cette essence et la traduisons en une identité visuelle
-                et sensorielle forte, à travers des tenues, des accessoires, des
-                espaces et des événements qui incarnent votre ADN. Découvrez
-                notre entreprise, notre vision, notre engagement
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <a href="#services" class="btn-get-started">Nos services</a>
             </div>
           </div>
-          <!-- End Carousel Item -->
-
-          <div class="carousel-item">
-            <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="" />
-            <div class="carousel-container">
-              <h2>Notre vision</h2>
-              <p>
-                Chez TRALAI, nous croyons que chaque entreprise a une
-                personnalité unique, une énergie qui se ressent à travers ses
-                valeurs et son image. Notre mission est de capter cette essence
-                et de la traduire de manière authentique et percutante à travers
-                des solutions de design sur mesure.
-              </p>
-              <a href="#services" class="btn-get-started">Nos services</a>
-            </div>
-          </div>
-          <!-- End Carousel Item -->
-
-          <div class="carousel-item">
-            <img src="assets/img/hero-carousel/hero-carousel-4.jpg" alt="" />
-            <div class="carousel-container">
-              <h2>Ce que nous faisons</h2>
-              <p>
-                Nous concevons des expériences visuelles et sensorielles qui
-                incarnent l’ADN des entreprises. Que ce soit à travers des
-                tenues corporate, des accessoires design, l’aménagement
-                d’espaces ou l’organisation d’événements, nous apportons un
-                style distinctif à la culture d’entreprise.
-              </p>
-              <a href="#services" class="btn-get-started">Nos services</a>
-            </div>
-          </div>
-          <!-- End Carousel Item -->
-
-          <a
-            class="carousel-control-prev"
-            href="#hero-carousel"
-            role="button"
-            data-bs-slide="prev"
-          >
-            <span
-              class="carousel-control-prev-icon bi bi-chevron-left"
-              aria-hidden="true"
-            ></span>
-          </a>
-
-          <a
-            class="carousel-control-next"
-            href="#hero-carousel"
-            role="button"
-            data-bs-slide="next"
-          >
-            <span
-              class="carousel-control-next-icon bi bi-chevron-right"
-              aria-hidden="true"
-            ></span>
-          </a>
-
-          <ol class="carousel-indicators"></ol>
         </div>
-      </section>
+      </div>
       <!-- /Hero Section -->
 
       <!-- Valors Section -->
-      <section id="valors" class="valors section dark-background">
+      <section id="valors" class="valors-section">
         <div class="container">
-          <div class="row gy-4 gx-5">
-            <!-- Item 1 -->
-            <div
-              class="col-12 col-md-6 service-item d-flex align-items-start mb-4"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="icon flex-shrink-0 me-3">
-                <i class="fas fa-lightbulb"></i>
-              </div>
-              <div>
-                <h4 class="title">Créativité/innovation</h4>
-                <p class="description">
+          <!-- En-tête de section -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Nos Valeurs</h2>
+            <div class="section-divider"></div>
+            <p>Les principes qui guident notre approche</p>
+          </div>
+
+          <!-- Grille de valeurs -->
+          <div class="values-grid">
+            <!-- Valeur 1 -->
+            <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="value-card-inner">
+                <div class="value-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3 class="value-title">Créativité & Innovation</h3>
+                <p class="value-description">
                   Nous explorons sans cesse de nouvelles idées et formes
-                  d’expression pour concevoir des identités qui marquent les
+                  d'expression pour concevoir des identités qui marquent les
                   esprits.
                 </p>
               </div>
             </div>
-            <!-- End Item 1 -->
 
-            <!-- Item 2 -->
-            <div
-              class="col-12 col-md-6 service-item d-flex align-items-start mb-4"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon flex-shrink-0 me-3">
-                <i class="fas fa-gem"></i>
-              </div>
-              <div>
-                <h4 class="title">Authenticité</h4>
-                <p class="description">
+            <!-- Valeur 2 -->
+            <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="value-card-inner">
+                <div class="value-icon">
+                  <i class="fas fa-gem"></i>
+                </div>
+                <h3 class="value-title">Authenticité</h3>
+                <p class="value-description">
                   Chaque projet est une traduction fidèle de ce que vous êtes.
                   Pas de surcouche, juste la bonne interprétation de votre ADN.
                 </p>
               </div>
             </div>
-            <!-- End Item 2 -->
 
-            <!-- Item 3 -->
-            <div
-              class="col-12 col-md-6 service-item d-flex align-items-start mb-4"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="icon flex-shrink-0 me-3">
-                <i class="fas fa-medal"></i>
-              </div>
-              <div>
-                <h4 class="title">Excellence</h4>
-                <p class="description">
+            <!-- Valeur 3 -->
+            <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="value-card-inner">
+                <div class="value-icon">
+                  <i class="fas fa-medal"></i>
+                </div>
+                <h3 class="value-title">Excellence</h3>
+                <p class="value-description">
                   Nous portons une attention rigoureuse aux détails et à la
-                  qualité de nos réalisations, du concept jusqu’à la livraison.
+                  qualité de nos réalisations, du concept jusqu'à la livraison.
                 </p>
               </div>
             </div>
-            <!-- End Item 3 -->
 
-            <!-- Item 4 -->
-            <div
-              class="col-12 col-md-6 service-item d-flex align-items-start mb-4"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="icon flex-shrink-0 me-3">
-                <i class="fas fa-handshake"></i>
-              </div>
-              <div>
-                <h4 class="title">Esprit collaboratif / Personnalisation</h4>
-                <p class="description">
+            <!-- Valeur 4 -->
+            <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="value-card-inner">
+                <div class="value-icon">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="value-title">Esprit Collaboratif</h3>
+                <p class="value-description">
                   Nous croyons que la co-construction est la clé de projets
                   réussis. Vos idées comptent, nos expertises les révèlent.
                 </p>
@@ -250,6 +207,7 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Nos Engagements</h2>
+          <div class="section-divider"></div>
           <p>
             Derrière chaque projet, un engagement sincère : faire de vos
             ambitions une réalité tangible et inspirante.
@@ -266,7 +224,7 @@
             >
               <p class="who-we-are">Notre promesse pour votre projet</p>
               <h3>Des engagements à la hauteur de vos ambitions</h3>
-              <p class="fst-italic">
+              <p class="fst-italic section-description">
                 Chez TRALAI, nous croyons en l'importance de comprendre vos
                 besoins pour offrir des solutions parfaitement adaptées. Notre
                 objectif est de vous accompagner tout au long de votre parcours
@@ -349,10 +307,11 @@
       <!-- /Engagement Section -->
 
       <!-- About Section -->
-      <section id="about" class="about section">
+      <section class="about section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>À Propos</h2>
+          <div class="section-divider"></div>
           <p>
             Plus qu'une équipe, un partenaire impliqué dans chaque étape de
             votre réussite.
@@ -369,7 +328,7 @@
             >
               <p class="who-we-are">Qui sommes-nous ?</p>
               <h3>Pourquoi choisir TRALAI ?</h3>
-              <p class="fst-italic">
+              <p class="fst-italic section-description">
                 Chez TRALAI, nous ne nous contentons pas de créer des designs,
                 nous racontons des histoires. Nous traduisons votre culture
                 d’entreprise en une identité visuelle et sensorielle forte, en
@@ -377,12 +336,13 @@
                 bénéficiez d’un partenaire qui comprend votre ADN et l’intègre
                 dans chaque détail de votre image. Prêts à donner du style à
                 votre entreprise ? Découvrez notre méthodologie de travail
-              </p>
-              <p>
-                Chez TRALAI, chaque projet suit une méthodologie éprouvée,
+                <br />
+                <br />
+                Avec nous, chaque projet suit une méthodologie éprouvée,
                 combinant rigueur, créativité et personnalisation. Découvrez les
                 étapes clés de notre processus.
               </p>
+
               <ul class="methodology-list">
                 <li>
                   <i class="bi bi-check-circle"></i>
@@ -462,196 +422,228 @@
                 </div>
               </div>
             </div>
-            <!-- Methodology Section  -->
-            <div id="about" class="methodology-div">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-12 text-center section-title">
-                    <h2>Notre Méthodologie de Travail</h2>
-                    <p>
-                      Une approche structurée pour transformer vos idées en
-                      réalité
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Timeline horizontale détaillée -->
-                <div class="horizontal-timeline">
-                  <div class="timeline-wrapper">
-                    <!-- Étape 1 -->
-                    <div class="timeline-item" data-aos="fade-up">
-                      <div class="timeline-number">1</div>
-                      <div class="timeline-content">
-                        <h3>Brief client</h3>
-                        <p>
-                          On vous écoute, vraiment. La première étape est la
-                          rencontre. Nous échangeons avec vous pour bien
-                          comprendre vos besoins, vos défis et vos objectifs.
-                          Chaque détail compte, et nous nous assurons d'avoir
-                          une vision claire de ce que vous attendez.
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- Étape 2 -->
-                    <div
-                      class="timeline-item"
-                      data-aos="fade-up"
-                      data-aos-delay="100"
-                    >
-                      <div class="timeline-number">2</div>
-                      <div class="timeline-content">
-                        <h3>Compréhension des besoins</h3>
-                        <p>
-                          Traduire vos idées en intentions de design. Nous
-                          prenons le temps de comprendre l'essence de votre
-                          entreprise, son ADN. Cette analyse nous permet
-                          d'identifier les meilleures solutions pour traduire
-                          vos valeurs et vos ambitions en designs percutants.
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- Étape 3 -->
-                    <div
-                      class="timeline-item"
-                      data-aos="fade-up"
-                      data-aos-delay="200"
-                    >
-                      <div class="timeline-number">3</div>
-                      <div class="timeline-content">
-                        <h3>Rapport de compréhension</h3>
-                        <p>
-                          Valider qu'on est sur la même longueur d'ondes. Une
-                          fois notre analyse faite, nous vous restituons un
-                          rapport détaillant notre compréhension du projet. Nous
-                          validons ensemble les lignes directrices avant de
-                          passer à l'étape suivante.
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- Étape 4 -->
-                    <div
-                      class="timeline-item"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <div class="timeline-number">4</div>
-                      <div class="timeline-content">
-                        <h3>Propositions & livrables</h3>
-                        <p>
-                          Des propositions qui vous ressemblent. À partir du
-                          rapport validé, nous passons à la création. Nous
-                          concevons des propositions visuelles et sensorielles
-                          adaptées à vos besoins spécifiques : tenues corporate,
-                          goodies, aménagement d'espaces...
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- Étape 5 -->
-                    <div
-                      class="timeline-item"
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                    >
-                      <div class="timeline-number">5</div>
-                      <div class="timeline-content">
-                        <h3>Recette</h3>
-                        <p>
-                          Tester, ajuster, valider. Nous testons les
-                          propositions et effectuons les ajustements
-                          nécessaires. Cette phase de validation est essentielle
-                          pour nous assurer que tout est conforme à vos attentes
-                          avant de lancer la production.
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- Étape 6 -->
-                    <div
-                      class="timeline-item"
-                      data-aos="fade-up"
-                      data-aos-delay="500"
-                    >
-                      <div class="timeline-number">6</div>
-                      <div class="timeline-content">
-                        <h3>Production & déploiement</h3>
-                        <p>
-                          Nous vous accompagnons jusqu'au bout. Une fois validé,
-                          nous passons à la production. Nous gérons tout le
-                          processus, de la fabrication à la livraison. Nous vous
-                          accompagnons dans le déploiement pour une intégration
-                          parfaite.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Methodology Section  -->
           </div>
         </div>
       </section>
       <!-- /About Section -->
+      <!-- Methodology Section  -->
+      <section id="method" class="methodology-div">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center section-title">
+              <h2>Notre Méthodologie de Travail</h2>
+              <div class="section-divider"></div>
+              <p>
+                Une approche structurée pour transformer vos idées en réalité
+              </p>
+            </div>
+          </div>
+
+          <div class="compact-timeline">
+            <!-- Étapes -->
+            <div class="timeline-steps">
+              <!-- Étape 1 -->
+              <div class="timeline-step" data-aos="fade-up">
+                <div class="step-icon">
+                  <span>1</span>
+                </div>
+                <div class="step-content">
+                  <h3>Brief client</h3>
+                  <p>
+                    On vous écoute, vraiment. Nous échangeons avec vous pour
+                    bien comprendre vos besoins, vos défis et vos objectifs.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Étape 2 -->
+              <div
+                class="timeline-step"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="step-icon">
+                  <span>2</span>
+                </div>
+                <div class="step-content">
+                  <h3>Compréhension des besoins</h3>
+                  <p>
+                    Traduire vos idées en intentions de design. Nous identifions
+                    les meilleures solutions pour traduire vos valeurs en
+                    designs percutants.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Étape 3 -->
+              <div
+                class="timeline-step"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="step-icon">
+                  <span>3</span>
+                </div>
+                <div class="step-content">
+                  <h3>Rapport de compréhension</h3>
+                  <p>
+                    Valider qu'on est sur la même longueur d'ondes. Une analyse
+                    détaillée pour aligner nos visions avant de passer à
+                    l'action.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Étape 4 -->
+              <div
+                class="timeline-step"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="step-icon">
+                  <span>4</span>
+                </div>
+                <div class="step-content">
+                  <h3>Propositions & livrables</h3>
+                  <p>
+                    Des propositions qui vous ressemblent. Nous concevons des
+                    propositions visuelles et sensorielles adaptées à vos
+                    besoins spécifiques.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Étape 5 -->
+              <div
+                class="timeline-step"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="step-icon">
+                  <span>5</span>
+                </div>
+                <div class="step-content">
+                  <h3>Recette</h3>
+                  <p>
+                    Tester, ajuster, valider. Nous affinons les propositions
+                    pour s'assurer qu'elles répondent parfaitement à vos
+                    attentes.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Étape 6 -->
+              <div
+                class="timeline-step"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <div class="step-icon">
+                  <span>6</span>
+                </div>
+                <div class="step-content">
+                  <h3>Production & déploiement</h3>
+                  <p>
+                    Nous vous accompagnons jusqu'au bout. De la fabrication à la
+                    livraison, nous gérons l'intégration parfaite de votre
+                    projet.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Methodology Section  -->
 
       <!-- Stats Section -->
       <section id="stats" class="stats section light-background">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item text-center w-100 h-100">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="232"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Clients</p>
-              </div>
+          <div class="row align-items-center">
+            <!-- Texte impactant à gauche -->
+            <div class="col-lg-5 col-md-12 stats-text-container">
+              <h2 class="stats-heading">
+                Derrière chaque chiffre, une réussite partagée
+              </h2>
+              <p class="stats-description">
+                Nos résultats témoignent de notre engagement envers l'excellence
+                et l'innovation. Chaque client, chaque projet et chaque heure
+                investie représente notre passion pour créer des solutions qui
+                transforment votre vision en réalité concrète.
+              </p>
+              <a href="#contact" class="stats-cta"
+                >Rejoignez notre success story</a
+              >
             </div>
-            <!-- End Stats Item -->
 
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item text-center w-100 h-100">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="521"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Projects</p>
-              </div>
-            </div>
-            <!-- End Stats Item -->
+            <!-- Stats modernes à droite -->
+            <div class="col-lg-7 col-md-12">
+              <div class="stats-grid">
+                <div class="stats-card" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="stats-icon">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div class="stats-number">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="232"
+                      data-purecounter-duration="1"
+                      class="purecounter"
+                    ></span>
+                    <span class="stats-plus">+</span>
+                  </div>
+                  <p class="stats-label">Clients satisfaits</p>
+                </div>
 
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item text-center w-100 h-100">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="1453"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Hours Of Support</p>
-              </div>
-            </div>
-            <!-- End Stats Item -->
+                <div class="stats-card" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="stats-icon">
+                    <i class="bi bi-archive-fill"></i>
+                  </div>
+                  <div class="stats-number">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="521"
+                      data-purecounter-duration="1"
+                      class="purecounter"
+                    ></span>
+                    <span class="stats-plus">+</span>
+                  </div>
+                  <p class="stats-label">Projets réalisés</p>
+                </div>
 
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item text-center w-100 h-100">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="32"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Workers</p>
+                <div class="stats-card" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="stats-icon">
+                    <i class="bi bi-clock-fill"></i>
+                  </div>
+                  <div class="stats-number">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="1453"
+                      data-purecounter-duration="1"
+                      class="purecounter"
+                    ></span>
+                    <span class="stats-plus">+</span>
+                  </div>
+                  <p class="stats-label">Heures de support</p>
+                </div>
+
+                <div class="stats-card" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="stats-icon">
+                    <i class="bi bi-person-workspace"></i>
+                  </div>
+                  <div class="stats-number">
+                    <span
+                      data-purecounter-start="0"
+                      data-purecounter-end="32"
+                      data-purecounter-duration="1"
+                      class="purecounter"
+                    ></span>
+                    <span class="stats-plus">+</span>
+                  </div>
+                  <p class="stats-label">Experts dédiés</p>
+                </div>
               </div>
             </div>
-            <!-- End Stats Item -->
           </div>
         </div>
       </section>
@@ -662,6 +654,7 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Services</h2>
+          <div class="section-divider"></div>
           <p>
             Découvrez comment nous pouvons vous assister à chaque étape de votre
             projet de création/conception, transformation et valorisation de
@@ -788,7 +781,7 @@
                   échange est une opportunité de créer quelque chose d’unique.
                   Contactez-nous dès aujourd’hui et donnons vie à vos idées.
                 </p>
-                <a class="cta-btn" href="#">Continuer</a>
+                <a class="cta-btn" href="#contact">Demander un devis</a>
               </div>
             </div>
           </div>
@@ -801,6 +794,7 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Portfolio</h2>
+          <div class="section-divider"></div>
           <p>
             Nous sommes fiers de nos projets réussis. Voici quelques exemples de
             notre travail, créés sur mesure pour ces clients qui nous ont fait
@@ -1176,394 +1170,12 @@
       </section>
       <!-- /Portfolio Section -->
 
-      <!-- Testiomoinial-->
-
-      <!-- END Testiomoinial-->
-
-      <!-- Team Section -->
-      <section id="team" class="team section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Notre Équipe</h2>
-          <p>
-            Une équipe dynamique et expérimentée, unie par la passion de créer
-            des solutions innovantes qui reflètent l’essence de votre entreprise
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="member">
-                <img
-                  src="assets/img/team/team-1.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Walter White</h4>
-                    <span>Chief Executive Officer</span>
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter-x"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Team Member -->
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="member">
-                <img
-                  src="assets/img/team/team-2.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Sarah Jhonson</h4>
-                    <span>Product Manager</span>
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter-x"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Team Member -->
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="member">
-                <img
-                  src="assets/img/team/team-3.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>William Anderson</h4>
-                    <span>CTO</span>
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter-x"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Team Member -->
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="member">
-                <img
-                  src="assets/img/team/team-4.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Amanda Jepson</h4>
-                    <span>Accountant</span>
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter-x"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End Team Member -->
-          </div>
-        </div>
-      </section>
-      <!-- /Team Section -->
-
-      <!-- Pricing Section -->
-      <section id="pricing" class="pricing section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Pricing</h2>
-          <p>
-            Découvrez nos offres sur mesure et choisissez la solution qui
-            correspond à vos besoins et à votre budget.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="zoom-in" data-aos-delay="100">
-          <div class="row g-4">
-            <div class="col-lg-4">
-              <div class="pricing-item">
-                <h3>Free Plan</h3>
-                <div class="icon">
-                  <i class="bi bi-box"></i>
-                </div>
-                <h4><sup>$</sup>0<span> / month</span></h4>
-                <ul>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Quam adipiscing vitae proin</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Nec feugiat nisl pretium</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Nulla at volutpat diam uteera</span>
-                  </li>
-                  <li class="na">
-                    <i class="bi bi-x"></i>
-                    <span>Pharetra massa massa ultricies</span>
-                  </li>
-                  <li class="na">
-                    <i class="bi bi-x"></i>
-                    <span>Massa ultricies mi quis hendrerit</span>
-                  </li>
-                </ul>
-                <div class="text-center">
-                  <a href="#" class="buy-btn">Buy Now</a>
-                </div>
-              </div>
-            </div>
-            <!-- End Pricing Item -->
-
-            <div class="col-lg-4">
-              <div class="pricing-item featured">
-                <h3>Business Plan</h3>
-                <div class="icon">
-                  <i class="bi bi-rocket"></i>
-                </div>
-
-                <h4><sup>$</sup>29<span> / month</span></h4>
-                <ul>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Quam adipiscing vitae proin</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Nec feugiat nisl pretium</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Nulla at volutpat diam uteera</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Pharetra massa massa ultricies</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Massa ultricies mi quis hendrerit</span>
-                  </li>
-                </ul>
-                <div class="text-center">
-                  <a href="#" class="buy-btn">Buy Now</a>
-                </div>
-              </div>
-            </div>
-            <!-- End Pricing Item -->
-
-            <div class="col-lg-4">
-              <div class="pricing-item">
-                <h3>Developer Plan</h3>
-                <div class="icon">
-                  <i class="bi bi-send"></i>
-                </div>
-                <h4><sup>$</sup>49<span> / month</span></h4>
-                <ul>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Quam adipiscing vitae proin</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Nec feugiat nisl pretium</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Nulla at volutpat diam uteera</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Pharetra massa massa ultricies</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i>
-                    <span>Massa ultricies mi quis hendrerit</span>
-                  </li>
-                </ul>
-                <div class="text-center">
-                  <a href="#" class="buy-btn">Buy Now</a>
-                </div>
-              </div>
-            </div>
-            <!-- End Pricing Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Pricing Section -->
-
-      <!-- Faq Section -->
-      <section id="faq" class="faq section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Frequently Asked Questions</h2>
-          <p>
-            Dans cette section, nous avons regroupé les questions les plus
-            courantes que nous recevons. Si vous ne trouvez pas la réponse que
-            vous cherchez, n’hésitez pas à nous contacter. Nous sommes là pour
-            vous aider !
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="faq-container">
-                <div class="faq-item">
-                  <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna
-                      id volutpat lacus laoreet non curabitur gravida. Venenatis
-                      lectus magna fringilla urna porttitor rhoncus dolor purus
-                      non.
-                    </p>
-                  </div>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
-                </div>
-                <!-- End Faq item-->
-
-                <div class="faq-item">
-                  <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque
-                      habitant morbi. Id interdum velit laoreet id donec
-                      ultrices. Fringilla phasellus faucibus scelerisque
-                      eleifend donec pretium. Est pellentesque elit ullamcorper
-                      dignissim. Mauris ultrices eros in cursus turpis massa
-                      tincidunt dui.
-                    </p>
-                  </div>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
-                </div>
-                <!-- End Faq item-->
-
-                <div class="faq-item">
-                  <h3>
-                    Dolor sit amet consectetur adipiscing elit pellentesque?
-                  </h3>
-                  <div class="faq-content">
-                    <p>
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                      sagittis orci. Faucibus pulvinar elementum integer enim.
-                      Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
-                      tellus pellentesque eu tincidunt. Lectus urna duis
-                      convallis convallis tellus. Urna molestie at elementum eu
-                      facilisis sed odio morbi quis
-                    </p>
-                  </div>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
-                </div>
-                <!-- End Faq item-->
-              </div>
-            </div>
-            <!-- End Faq Column-->
-
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="faq-container">
-                <div class="faq-item">
-                  <h3>
-                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                  </h3>
-                  <div class="faq-content">
-                    <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque
-                      habitant morbi. Id interdum velit laoreet id donec
-                      ultrices. Fringilla phasellus faucibus scelerisque
-                      eleifend donec pretium. Est pellentesque elit ullamcorper
-                      dignissim. Mauris ultrices eros in cursus turpis massa
-                      tincidunt dui.
-                    </p>
-                  </div>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
-                </div>
-                <!-- End Faq item-->
-
-                <div class="faq-item">
-                  <h3>
-                    Tempus quam pellentesque nec nam aliquam sem et tortor?
-                  </h3>
-                  <div class="faq-content">
-                    <p>
-                      Molestie a iaculis at erat pellentesque adipiscing
-                      commodo. Dignissim suspendisse in est ante in. Nunc vel
-                      risus commodo viverra maecenas accumsan. Sit amet nisl
-                      suscipit adipiscing bibendum est. Purus gravida quis
-                      blandit turpis cursus in
-                    </p>
-                  </div>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
-                </div>
-                <!-- End Faq item-->
-
-                <div class="faq-item">
-                  <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
-                  <div class="faq-content">
-                    <p>
-                      Enim ea facilis quaerat voluptas quidem et dolorem. Quis
-                      et consequatur non sed in suscipit sequi. Distinctio ipsam
-                      dolore et.
-                    </p>
-                  </div>
-                  <i class="faq-toggle bi bi-chevron-right"></i>
-                </div>
-                <!-- End Faq item-->
-              </div>
-            </div>
-            <!-- End Faq Column-->
-          </div>
-        </div>
-      </section>
-      <!-- /Faq Section -->
-
       <!-- Contact Section -->
       <section id="contact" class="contact section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
+          <div class="section-divider"></div>
           <p>
             Contactez-nous dès maintenant, nous sommes là pour répondre à toutes
             vos questions et vous accompagner dans vos projets !
@@ -1672,12 +1284,12 @@
       <!-- /Contact Section -->
     </main>
 
-    <footer id="footer" class="footer dark-background">
+    <footer id="footer" class="footer">
       <div class="container footer-top">
         <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
+          <div class="col-lg-3 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">BizPage</span>
+              <span class="sitename">TRALAI</span>
             </a>
             <div class="footer-contact pt-3">
               <p>A108 Adam Street</p>
@@ -1688,7 +1300,7 @@
               <p><strong>Email:</strong> <span>info@example.com</span></p>
             </div>
             <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-youtube"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
               <a href=""><i class="bi bi-instagram"></i></a>
               <a href=""><i class="bi bi-linkedin"></i></a>
@@ -1696,20 +1308,20 @@
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Liens</h4>
             <ul>
               <li><a href="#hero">Menu</a></li>
               <li><a href="#about">À Propos</a></li>
+              <li><a href="#method">Méthodologie</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#pricing">Pricing</a></li>
               <li><a href="#">Conditions d'utilisation</a></li>
-              <li><a href="#">Politique de confidentialité"</a></li>
+              <li><a href="#">Politique de confidentialité</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
+          <div class="col-lg-3 col-md-3 footer-links">
+            <h4>Nos Services</h4>
             <ul>
               <li><a href="service-details.html">Tenues corporate</a></li>
               <li><a href="service-details.html">Goodies/ Accessoires</a></li>
