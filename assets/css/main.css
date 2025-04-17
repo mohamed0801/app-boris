@@ -672,55 +672,346 @@ h6 {
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 160px 0 80px 0;
-  text-align: center;
+  color: #fff;
+  background-color: var(--accent-color);
+  padding: 100px 0 15px 0; /* Hauteur réduite */
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Effet de profondeur avec des shapes modernes */
+.page-title::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 70%;
+  height: 150%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.05) 30%,
+    transparent 70%
+  );
+  transform: rotate(-15deg);
+  z-index: 1;
+  animation: pulse 15s infinite alternate ease-in-out;
+}
+
+/* Animation du gradient radial */
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+    transform: rotate(-15deg) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-12deg) scale(1.05);
+  }
+}
+
+/* Ajout de motifs de "mesh gradient" moderne */
+.page-title::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 60%;
+  height: 140%;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.05) 30%,
+    transparent 70%
+  );
+  transform: rotate(15deg);
+  z-index: 1;
+}
+
+/* Éléments géométriques flottants - taille réduite */
+.geometric-element {
+  position: absolute;
+  z-index: 2;
+  opacity: 0.12;
+}
+
+.geometric-element.circle {
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  top: -60px;
+  right: 10%;
+  animation: float 20s infinite alternate ease-in-out;
+}
+
+.geometric-element.square {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  bottom: -30px;
+  left: 15%;
+  transform: rotate(45deg);
+  animation: float 15s infinite alternate-reverse ease-in-out;
+}
+
+.geometric-element.triangle {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 120px solid rgba(255, 255, 255, 0.3);
+  top: 20%;
+  left: -30px;
+  animation: float 25s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(15px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(-15px) rotate(-5deg);
+  }
+}
+
+.page-title .container {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.page-title .title-container {
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
   position: relative;
 }
 
-.page-title:before {
-  content: "";
-  background-color: color-mix(
-    in srgb,
-    var(--background-color),
-    transparent 50%
-  );
-  position: absolute;
-  inset: 0;
+.page-title h1 {
+  font-size: 56px; /* Taille réduite */
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #fff;
+  text-align: left;
+  line-height: 1;
+  position: relative;
+  letter-spacing: -0.5px;
+  /* Suppression du dégradé pour garantir la visibilité */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Ajout d'un outline pour garantir la visibilité */
 .page-title h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  color: #fff;
+  position: relative;
+  z-index: 5;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.page-title h1 span {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  opacity: 0.8;
+}
+
+.page-title p {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 20px;
+  position: relative;
+  text-align: justify;
+}
+
+/* Style ultra-moderne pour les fils d'Ariane */
+.page-title .breadcrumbs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 25px; /* Réduit */
 }
 
 .page-title .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  justify-content: center;
   padding: 0;
   margin: 0;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.page-title .breadcrumbs ol::before {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-right: 12px;
+}
+
+.page-title .breadcrumbs ol a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.page-title .breadcrumbs ol a:hover100px {
+  opacity: 1;
+}
+
+.page-title .breadcrumbs ol a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.page-title .breadcrumbs ol a:hover::after {
+  width: 100%;
+}
+
+.page-title .breadcrumbs ol li {
+  display: flex;
+  align-items: center;
+}
+
+.page-title .breadcrumbs ol li.current {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
 }
 
 .page-title .breadcrumbs ol li + li {
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 .page-title .breadcrumbs ol li + li::before {
-  content: "/";
+  content: "›";
   display: inline-block;
-  padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  padding-right: 8px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 30px;
 }
 
+/* Animation AOS améliorée */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animations décalées pour les éléments - temps réduits */
+.title-container > * {
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+.title-container h1 {
+  animation-delay: 0.2s;
+}
+
+.title-container p {
+  animation-delay: 0.4s;
+}
+
+.title-container .breadcrumbs {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .page-title h1 {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-title {
+    padding: 100px 0 70px 0;
+  }
+
+  .page-title h1 {
+    font-size: 48px;
+  }
+
+  .page-title p {
+    font-size: 16px;
+  }
+
+  .geometric-element.circle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-title {
+    padding: 90px 0 60px 0;
+  }
+
+  .page-title .title-container {
+    text-align: center;
+  }
+
+  .page-title h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .page-title h1 span {
+    font-size: 15px;
+  }
+
+  .page-title p {
+    font-size: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-title .breadcrumbs {
+    justify-content: center;
+  }
+
+  .page-title .breadcrumbs ol::before {
+    display: none;
+  }
+}
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
@@ -870,7 +1161,7 @@ section,
 }
 
 @media (max-width: 991px) {
-  .hero-section h2 {
+  .hero-section h1 {
     font-size: 36px;
   }
 
@@ -880,7 +1171,7 @@ section,
 }
 
 @media (max-width: 768px) {
-  .hero-section h2 {
+  .hero-section h1 {
     font-size: 30px;
   }
 
@@ -1093,6 +1384,7 @@ section,
   line-height: 1.7;
   color: var(--default-color);
   margin-bottom: 0;
+  text-align: justify;
 }
 
 /* Numéro de valeur */
@@ -1761,6 +2053,7 @@ section,
   line-height: 24px;
   font-size: 16px;
   margin: 0;
+  text-align: justify;
 }
 .services .service-item .description i {
   font-size: 16px;
@@ -2696,23 +2989,24 @@ section,
 }
 
 .service-details h3 {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .service-details h4 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .service-details p {
-  font-size: 15px;
+  font-size: 16px;
+  text-align: justify;
 }
 
 .service-details ul {
   list-style: none;
   padding: 0;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .service-details ul li {

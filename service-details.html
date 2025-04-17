@@ -44,48 +44,87 @@
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
       >
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">TRALAI</h1>
-        </a>
-
         <nav id="navmenu" class="navmenu">
+          <!-- Version desktop du menu avec logo au centre -->
+          <div class="nav-container">
+            <!-- Liens à gauche du logo -->
+            <div class="nav-left">
+              <ul>
+                <li><a href="index.html" class="active">Menu</a></li>
+                <li><a href="index.html">À Propos</a></li>
+                <li><a href="index.html">Méthodologie</a></li>
+              </ul>
+            </div>
+
+            <!-- Logo au milieu -->
+            <div class="nav-logo">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img src="assets/img/Logo-TRALAI.png" alt="" />
+                <!--  <h1 class="sitename">TRALAI</h1>-->
+              </a>
+            </div>
+
+            <!-- Liens à droite du logo -->
+            <div class="nav-right">
+              <ul>
+                <li><a href="index.html">Services</a></li>
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="#index.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Version mobile: bouton toggle à gauche et logo à droite -->
+          <div class="mobile-header">
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            <div class="mobile-logo">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename">TRALAI</h1>
+              </a>
+            </div>
+          </div>
+
+          <!-- Liste pour la version mobile -->
           <ul>
-            <li><a href="index.html">Menu</a></li>
+            <li><a href="index.html" class="active">Menu</a></li>
             <li><a href="index.html">À Propos</a></li>
+            <li><a href="index.html">Méthodologie</a></li>
             <li><a href="index.html">Services</a></li>
-            <li><a href="index.html">Portfolio</a></li>
-            <li><a href="index.html">Pricing</a></li>
-            <li><a href="index.html">Équipe</a></li>
-            <li><a href="index.html">Contact</a></li>
+            <li><a href="#index.html">Portfolio</a></li>
+            <li><a href="#index.html">Contact</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
       </div>
     </header>
 
     <main class="main">
       <!-- Page Title -->
-      <div
-        class="page-title dark-background"
-        data-aos="fade"
-        style="background-image: url(assets/img/page-title-bg.jpg)"
-      >
+      html
+      <div class="page-title" data-aos="fade">
+        <!-- Éléments géométriques décoratifs -->
+        <div class="geometric-element circle"></div>
+        <div class="geometric-element square"></div>
+        <div class="geometric-element triangle"></div>
+
         <div class="container position-relative">
-          <h1>Services</h1>
-          <p>
-            Chaque service que nous proposons est conçu avec précision, en
-            tenant compte de vos enjeux, de vos objectifs et de votre identité.
-            Découvrez comment nous transformons vos besoins en résultats
-            concrets.
-          </p>
-          <nav class="breadcrumbs">
-            <ol>
-              <li><a href="index.html">Home</a></li>
-              <li class="current">Service Details</li>
-            </ol>
-          </nav>
+          <div class="title-container">
+            <h1><span>Notre expertise</span>Services</h1>
+            <p>
+              Chaque service que nous proposons est conçu avec précision, en
+              tenant compte de vos enjeux, de vos objectifs et de votre
+              identité. Découvrez comment nous transformons vos besoins en
+              résultats concrets.
+            </p>
+            <nav class="breadcrumbs">
+              <ol>
+                <li><a href="index.html">Menu</a></li>
+                <li class="current">Service Details</li>
+              </ol>
+            </nav>
+          </div>
         </div>
       </div>
       <!-- End Page Title -->
@@ -166,12 +205,12 @@
       <!-- /Service Details Section -->
     </main>
 
-    <footer id="footer" class="footer dark-background">
+    <footer id="footer" class="footer">
       <div class="container footer-top">
         <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
+          <div class="col-lg-3 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">BizPage</span>
+              <img src="assets/img/Logo-TRALAI.png" alt="" />
             </a>
             <div class="footer-contact pt-3">
               <p>A108 Adam Street</p>
@@ -182,7 +221,7 @@
               <p><strong>Email:</strong> <span>info@example.com</span></p>
             </div>
             <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-youtube"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
               <a href=""><i class="bi bi-instagram"></i></a>
               <a href=""><i class="bi bi-linkedin"></i></a>
@@ -190,20 +229,20 @@
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Liens</h4>
             <ul>
               <li><a href="index.html">Menu</a></li>
               <li><a href="index.html">À Propos</a></li>
+              <li><a href="index.html">Méthodologie</a></li>
               <li><a href="index.html">Services</a></li>
               <li><a href="index.html">Portfolio</a></li>
-              <li><a href="index.html">Pricing</a></li>
               <li><a href="#">Conditions d'utilisation</a></li>
-              <li><a href="#">Politique de confidentialité"</a></li>
+              <li><a href="#">Politique de confidentialité</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
+          <div class="col-lg-3 col-md-3 footer-links">
+            <h4>Nos Services</h4>
             <ul>
               <li><a href="service-details.html">Tenues corporate</a></li>
               <li><a href="service-details.html">Goodies/ Accessoires</a></li>
