@@ -25,7 +25,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #ede6da; /* Background color for the entire website, including individual sections */
+  --background-color: #ffffff; /*#ede6da;*/ /* Background color for the entire website, including individual sections */
   --default-color: #666666; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #1a2642; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #d9643a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -37,13 +37,13 @@
 :root {
   --nav-color: #1a2642; /* The default color of the main navmenu links */
   --nav-hover-color: #d9643a; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ede6da;
+  --nav-mobile-background-color: ffffff; /*#ede6da;*/
   --nav-dropdown-color: #1a2642;
   --nav-dropdown-hover-color: #d9643a;
 }
 
 :root {
-  --nav-spacing: 20px;
+  --nav-spacing: 15px;
   --mobile-nav-height: 30px; /* Hauteur encore plus réduite */
 }
 
@@ -145,7 +145,7 @@ h6 {
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .header .logo {
@@ -153,8 +153,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
+  max-height: 50px;
 }
 
 .header .logo h1 {
@@ -434,7 +433,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #ede6da; /*var(--background-color);*/
   font-size: 14px;
   position: relative;
 }
@@ -542,7 +541,7 @@ h6 {
   border-radius: 4px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
   display: flex;
-  background-color: var(--background-color);
+  background-color:#ede6da /*var(--background-color);*/
   transition: 0.3s;
 }
 
@@ -554,7 +553,7 @@ h6 {
   border: 0;
   padding: 4px;
   width: 100%;
-  background-color: var(--background-color);
+  background-color:#ede6da /*var(--background-color);*/
   color: var(--default-color);
 }
 
@@ -729,7 +728,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 50px 0;
+  padding: 40px 20px 40px 20px;
   scroll-margin-top: 85px;
   overflow: clip;
 }
@@ -774,7 +773,7 @@ section,
 
 .hero-section {
   width: 100%;
-  padding: 40px 0;
+  padding: 40px 20px 0 20px;
   background-color: var(--background-color);
   display: flex;
   align-items: center;
@@ -784,12 +783,12 @@ section,
 .hero-container {
   width: 90%; /* Augmenté à 90% pour une image plus grande */
   max-width: 1400px; /* Pour limiter sur très grands écrans */
-  margin: 0 auto;
+  margin: 55px auto;
 }
 
 .hero-image {
   width: 100%;
-  height: 80vh; /* Hauteur fixe pour une image plus grande */
+  height: 85vh; /* Hauteur fixe pour une image plus grande */
   position: relative;
   overflow: hidden;
   border-radius: 12px;
@@ -1771,64 +1770,214 @@ section,
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  padding: 80px 0;
+  padding: 100px 0;
   position: relative;
-  clip-path: inset(0);
+  background-color: var(--background-color); /* On garde le fond actuel */
+  background-image: linear-gradient(
+    135deg,
+    var(--background-color) 0%,
+    #f0e9d7 100%
+  );
 }
 
-.call-to-action img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.container {
+  position: relative;
   z-index: 1;
 }
 
-.call-to-action:before {
+/* Ajout d'éléments décoratifs plus modernes pour l'arrière-plan */
+.call-to-action::before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at 20% 30%,
+    rgba(217, 100, 58, 0.15) 0%,
+    transparent 60%
+  );
+}
+
+.call-to-action::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  background-image: radial-gradient(
+    circle at 80% 80%,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 50%
+  );
+}
+
+/* Le conteneur principal pour le CTA - utilisant accent-color */
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--accent-color); /* Fond avec accent-color */
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  padding: 50px;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+/* Effet décoratif moderne */
+.cta-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.15),
+    transparent 60%
+  );
+  opacity: 0.6;
+}
+
+.cta-content {
+  flex: 1;
+  padding-right: 40px;
+  position: relative;
   z-index: 2;
 }
 
-.call-to-action .container {
-  position: relative;
-  z-index: 3;
-}
-
-.call-to-action h3 {
-  font-size: 28px;
+.cta-content h3 {
+  font-size: 34px;
   font-weight: 700;
-  color: #1a2642;
+  color: white; /* Texte blanc pour contraste sur fond accent */
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
 }
 
-.call-to-action p {
-  color: var(--default-color);
+.cta-content h3::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background: white; /* Ligne blanche pour meilleur contraste */
+  bottom: 0;
+  left: 0;
 }
 
-.call-to-action .cta-btn {
+.cta-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9); /* Texte blanc légèrement transparent */
+  margin-bottom: 0;
+}
+
+.cta-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-btn {
   font-family: var(--heading-font);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid var(--contrast-color);
-  color: var(--contrast-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 36px;
+  border-radius: 50px;
+  background: white; /* Bouton blanc pour contraster avec fond accent */
+  color: var(--accent-color); /* Texte de couleur accent */
+  text-decoration: none;
+  box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  white-space: nowrap;
 }
 
-.call-to-action .cta-btn:hover {
-  background: var(--accent-color);
-  border: 2px solid var(--accent-color);
+.cta-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: left 0.7s ease;
 }
 
+.cta-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.4);
+}
+
+.cta-btn:hover::before {
+  left: 100%;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .cta-container {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .cta-content {
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .cta-content h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .cta-button-container {
+    padding-left: 0;
+    border-left: none;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .call-to-action {
+    padding: 60px 0;
+  }
+
+  .cta-container {
+    padding: 30px 25px;
+  }
+
+  .cta-content h3 {
+    font-size: 28px;
+  }
+
+  .cta-content p {
+    font-size: 16px;
+  }
+}
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
