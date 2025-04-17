@@ -203,7 +203,7 @@ h6 {
   position: relative; /* Pour le positionnement des enfants */
 }
 
-.mobile-logo img {
+.header .mobile-logo img {
   max-height: 35px; /* Taille du logo encore réduite */
 }
 
