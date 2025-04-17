@@ -138,7 +138,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #ede6da;
+  --background-color: #faf8f5;
   --default-color: #1a2642;
   color: var(--default-color);
   background-color: var(--background-color);
@@ -172,7 +172,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #ede6da;
+  --background-color: #faf8f5;
 }
 
 /*--------------------------------------------------------------
@@ -433,7 +433,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: #ede6da; /*var(--background-color);*/
+  background-color: #faf8f5; /*var(--background-color);*/
   font-size: 14px;
   position: relative;
 }
@@ -541,7 +541,7 @@ h6 {
   border-radius: 4px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
   display: flex;
-  background-color:#ede6da /*var(--background-color);*/
+  background-color: #ede6da; /*var(--background-color);*/
   transition: 0.3s;
 }
 
@@ -553,7 +553,7 @@ h6 {
   border: 0;
   padding: 4px;
   width: 100%;
-  background-color:#ede6da /*var(--background-color);*/
+  background-color: #ede6da; /*var(--background-color);*/
   color: var(--default-color);
 }
 
@@ -773,7 +773,7 @@ section,
 
 .hero-section {
   width: 100%;
-  padding: 40px 20px 0 20px;
+  padding: 60px 20px 0 20px;
   background-color: var(--background-color);
   display: flex;
   align-items: center;
@@ -791,14 +791,14 @@ section,
   height: 85vh; /* Hauteur fixe pour une image plus grande */
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .hero-overlay {
