@@ -37,7 +37,7 @@
 :root {
   --nav-color: #1a2642; /* The default color of the main navmenu links */
   --nav-hover-color: #d9643a; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: ffffff; /*#ede6da;*/
+  --nav-mobile-background-color: #ffffff; /*#ede6da;*/
   --nav-dropdown-color: #1a2642;
   --nav-dropdown-hover-color: #d9643a;
 }
@@ -138,7 +138,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #faf8f5;
+  --background-color: #ffffff; /*#faf8f5;*/
   --default-color: #1a2642;
   color: var(--default-color);
   background-color: var(--background-color);
@@ -172,7 +172,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #faf8f5;
+  --background-color: #ffffff; /*#faf8f5;*/
 }
 
 /*--------------------------------------------------------------
@@ -776,7 +776,7 @@ section,
 
 .hero-section {
   width: 100%;
-  padding: 60px 20px 0 20px;
+  padding: 35px 20px 0 20px;
   background-color: var(--background-color);
   display: flex;
   align-items: center;
