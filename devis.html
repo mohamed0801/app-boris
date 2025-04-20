@@ -19,6 +19,12 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- Vendor CSS Files -->
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
@@ -92,100 +98,195 @@
     </header>
 
     <main class="main">
-      <!-- Page Title -->
+      <!-- Section d'en-tête - Contactez-nous -->
       <div class="contact-header">
         <div class="contact-header-content">
-          <h1>Nos Services</h1>
+          <h1>Contactez-nous</h1>
           <p>
-            Chaque service que nous proposons est conçu avec précision, en
-            tenant compte de vos enjeux, de vos objectifs et de votre identité.
-            Découvrez comment nous transformons vos besoins en résultats
-            concrets.
+            Vous souhaitez obtenir un devis personnalisé pour l'un de nos
+            services? Remplissez le formulaire ci-dessous et nous vous
+            répondrons dans les plus brefs délais.
           </p>
           <nav class="breadcrumbs">
             <ol>
               <li><a href="index.html">Accueil</a></li>
-              <li class="current">Service Details</li>
+              <li class="current">Demande de devis</li>
             </ol>
           </nav>
         </div>
       </div>
-      <!-- End Page Title -->
 
-      <!-- Service Details Section -->
-      <section id="service-details" class="service-details section">
+      <!-- Section de sélection des besoins -->
+      <section class="needs-section">
         <div class="container">
-          <div class="row gy-4">
-            <!-- Liste des services -->
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="services-list">
-                <a
-                  href="#"
-                  class="active"
-                  data-img-src="assets/img/services.jpg"
-                  >Tenues corporate</a
-                >
-                <a href="#" data-img-src="assets/img/services.jpg"
-                  >Goodies/ Accessoires</a
-                >
-                <a href="#" data-img-src="assets/img/services.jpg"
-                  >Aménagement d’espaces de travail</a
-                >
-                <a href="#" data-img-src="assets/img/services.jpg"
-                  >Organisation d’événements internes</a
-                >
-              </div>
+          <h2>Sélectionnez votre besoin</h2>
+          <p>
+            Choisissez le service pour lequel vous souhaitez un devis
+            personnalisé.
+          </p>
+
+          <div class="needs-grid">
+            <div class="needs-card active">
+              <i class="fas fa-tshirt"></i>
+              <h3>Tenue corporate</h3>
             </div>
 
-            <!-- Section d'images et de texte -->
-            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-              <img
-                src="assets/img/services.jpg"
-                alt=""
-                class="img-fluid services-img"
-              />
-              <h3>
-                Design personnalisé et impression de tenues qui incarnent votre
-                identité
-              </h3>
-              <p>
-                Chez TRALAI, nous créons le design de vos polos, t-shirts ou
-                chemises personnalisés, en lien avec votre logo ou en harmonie
-                avec l'événement que vous organisez. En plus de la conception
-                graphique, nous nous chargeons de l'impression des tenues, afin
-                que vos collaborateurs ou invités portent fièrement l'image de
-                votre entreprise.
-              </p>
-              <ul>
-                <li>
-                  <i class="bi bi-check-circle"></i
-                  ><span>
-                    Design sur-mesure: création de modèles uniques adaptés à
-                    votre identité et à vos besoins spécifiques</span
-                  >
-                </li>
-                <li>
-                  <i class="bi bi-check-circle"></i
-                  ><span>
-                    Personnalisation complète: intégration de votre logo, de
-                    slogans ou de motifs en lien avec l'événement</span
-                  >
-                </li>
-                <li>
-                  <i class="bi bi-check-circle"></i
-                  ><span
-                    >Impression professionnelle : du design à l'impression, nous
-                    garantissons une qualité irréprochable pour chaque
-                    vêtement</span
-                  >
-                </li>
-              </ul>
+            <div class="needs-card">
+              <i class="fas fa-gift"></i>
+              <h3>Assessories & goodies</h3>
+            </div>
+
+            <div class="needs-card">
+              <i class="fas fa-building"></i>
+              <h3>Design d'espace de travaille</h3>
+            </div>
+
+            <div class="needs-card">
+              <i class="fas fa-champagne-glasses"></i>
+              <h3>Organisation d'event coporate</h3>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- /Service Details Section -->
+      <!-- Section Formulaire -->
+      <section class="form-section">
+        <div class="container">
+          <h3>Formulaire</h3>
+
+          <form id="devis-form">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nom" class="form-label">Nom complet *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nom"
+                    placeholder="Votre nom"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="entreprise" class="form-label"
+                    >Entreprise *</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="entreprise"
+                    placeholder="Nom de votre entreprise"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email" class="form-label"
+                    >Email professionnel *</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="votre@email.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="telephone" class="form-label">Téléphone</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="telephone"
+                    placeholder="Votre numéro de téléphone"
+                  />
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="sujet" class="form-label">Sujet du devis *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="sujet"
+                    placeholder="Objet de votre demande"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="description" class="form-label"
+                    >Description du projet *</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="description"
+                    rows="5"
+                    placeholder="Décrivez votre projet en détail..."
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="budget" class="form-label">Budget estimé</label>
+                  <select class="form-control" id="budget">
+                    <option value="">Sélectionnez votre budget</option>
+                    <option value="moins-1000">Moins de 100 000 XOF</option>
+                    <option value="1000-5000">
+                      Entre 100 000 XOF et 500 000XOF €
+                    </option>
+                    <option value="5000-10000">
+                      Entre 500 000 XOF € et 1 000 000 XOF
+                    </option>
+                    <option value="plus-10000">Plus de 1 000 000 XOF</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="echeance" class="form-label"
+                    >Échéance du projet</label
+                  >
+                  <input type="date" class="form-control" id="echeance" />
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="conditions"
+                      required
+                    />
+                    <label class="form-check-label" for="conditions">
+                      J'accepte les conditions d'utilisation et la politique de
+                      confidentialité *
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Envoyer ma demande</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer id="footer" class="footer">

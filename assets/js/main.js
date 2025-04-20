@@ -424,3 +424,40 @@
     });
   });
 })();
+/*******************************************************************
+ * Devis Form
+ * *****************************************************************/
+document.addEventListener("DOMContentLoaded", function () {
+  // Gestion des cartes de sélection des besoins
+  const needsCards = document.querySelectorAll(".needs-card");
+
+  needsCards.forEach((card) => {
+    card.addEventListener("click", function () {
+      // Retirer la classe active de toutes les cartes
+      needsCards.forEach((c) => c.classList.remove("active"));
+
+      // Ajouter la classe active à la carte cliquée
+      this.classList.add("active");
+
+      // Mettre à jour le sujet du formulaire en fonction de la sélection
+      const serviceName = this.querySelector("h3").textContent;
+      document.getElementById(
+        "sujet"
+      ).value = `Demande de devis pour ${serviceName}`;
+    });
+  });
+
+  // Validation du formulaire
+  document
+    .getElementById("devis-form")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Simuler l'envoi du formulaire
+      alert(
+        "Votre demande de devis a été envoyée avec succès! Nous vous contacterons très prochainement."
+      );
+
+      // Dans un vrai scénario, vous enverriez les données à votre backend ici
+    });
+});
