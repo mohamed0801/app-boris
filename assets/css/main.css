@@ -43,7 +43,7 @@
 }
 
 :root {
-  --nav-spacing: 15px;
+  --nav-spacing: 100px;
   --mobile-nav-height: 30px; /* Hauteur encore plus réduite */
 }
 
@@ -178,100 +178,48 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Navmenu - Desktop */
-/* Styles généraux de la navbar */
-/* Styles pour la nouvelle structure avec logo au centre */
-/* Structure de base pour le menu desktop avec logo au centre */
-.navmenu {
-  width: 100%;
-  position: relative;
-}
-
-.nav-container {
-  display: none; /* Caché par défaut, visible seulement en desktop */
-}
-
-/* Header mobile avec logo à droite et toggle à gauche */
-.mobile-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3px 10px; /* Padding encore plus réduit */
-  width: 100%;
-  height: var(--mobile-nav-height); /* Hauteur fixe très réduite */
-  flex-direction: row-reverse; /* Toggle à gauche, logo à droite */
-  position: relative; /* Pour le positionnement des enfants */
-}
-
-.header .mobile-logo img {
-  max-height: 35px; /* Taille du logo encore réduite */
-}
-
-/* Positionnement du bouton toggle pour éviter les chevauchements */
-.mobile-nav-toggle {
-  position: relative;
-  z-index: 9997;
-  font-size: 24px; /* Taille réduite pour l'icône */
-}
-
-/* Animation instantanée pour le logo lors de l'ouverture du menu */
-.mobile-logo {
-  transition: opacity 0s, visibility 0s; /* Transition immédiate */
-}
 
 /* Styles pour desktop */
 @media (min-width: 1200px) {
-  /* Activer la structure avec logo au centre sur desktop */
+  /* Modifier la structure pour avoir le logo à gauche */
   .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Alignement au début plutôt que space-between */
     align-items: center;
     width: 100%;
     padding: 0 var(--nav-spacing);
   }
 
-  /* Style pour les sections gauche et droite */
-  .nav-left,
-  .nav-right {
+  /* Supprimer les sections gauche/droite et remplacer par une seule section de liens */
+  .nav-links {
     flex: 1;
+    padding-top: 15px;
   }
 
-  /* Style pour les listes de liens */
-  .nav-left ul,
-  .nav-right ul {
+  /* Style pour la liste de liens */
+  .nav-links ul {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 var(--nav-spacing); /* Espacement à gauche uniquement */
+    justify-content: flex-start; /* Alignement des liens à gauche */
   }
 
-  .nav-left ul {
-    justify-content: flex-end;
-    padding-right: var(--nav-spacing);
-  }
-
-  .nav-right ul {
-    justify-content: flex-start;
-    padding-left: var(--nav-spacing);
-  }
-
-  /* Logo au centre */
+  /* Logo à gauche au lieu du centre */
   .nav-logo {
-    text-align: center;
+    margin-right: 70px; /* Ajouter de l'espace entre le logo et les liens */
   }
 
   .nav-logo img {
-    max-height: 50px;
+    max-height: 60px;
   }
 
   /* Style pour les liens dans notre structure personnalisée */
-  .nav-left ul li,
-  .nav-right ul li {
+  .nav-links ul li {
     margin: 0 10px;
   }
 
-  .nav-left ul li a,
-  .nav-right ul li a {
+  .nav-links ul li a {
     color: var(--nav-color);
     padding: 18px 15px;
     font-size: 13px;
@@ -285,11 +233,8 @@ h6 {
     text-decoration: none;
   }
 
-  .nav-left ul li:hover > a,
-  .nav-right ul li:hover > a,
-  .nav-left ul li a.active,
-  .nav-right ul li a.active,
-  .navmenu > ul li a.active {
+  .nav-links ul li:hover > a,
+  .nav-links ul li a.active {
     color: var(--nav-hover-color);
   }
 
@@ -303,131 +248,80 @@ h6 {
     display: none;
   }
 }
-
-/* Modification pour éviter le chevauchement logo/croix */
 @media (max-width: 1199px) {
-  /* Ajustement pour le bouton de fermeture */
-  .mobile-nav-active .mobile-nav-toggle {
-    position: fixed; /* Position fixe quand le menu est actif */
-    top: 10px; /* Position plus haute */
-    left: 10px; /* Position plus à gauche */
-    right: auto; /* Annuler le right qui pourrait être défini ailleurs */
-    z-index: 9999;
+  /* Structure principale pour mobile */
+  .nav-container {
+    display: none; /* Cacher la version desktop */
   }
 
-  /* Masquer IMMÉDIATEMENT le logo lorsque le menu est ouvert */
-  .mobile-nav-active .mobile-logo {
-    opacity: 0;
-    visibility: hidden;
-    transition: none; /* Pas de transition, disparaît immédiatement */
-  }
-}
-/* Navmenu - Mobile */
-@media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
-    line-height: 0;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-
-  .navmenu {
-    padding: 0;
-    z-index: 9997;
-  }
-
-  .navmenu ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
-    font-family: var(--nav-font);
-    font-size: 17px;
-    font-weight: 500;
+  /* Afficher l'en-tête mobile */
+  .mobile-header {
     display: flex;
     align-items: center;
+    width: 100%;
     justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
+    /* Ajoutez une bordure pour le débogage */
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  /* Style pour le logo mobile */
+  .mobile-logo img {
+    max-height: 50px;
   }
 
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
+  /* Bouton toggle pour le menu mobile */
+  .mobile-nav-toggle {
+    font-size: 28px;
+    color: var(--nav-color);
+    cursor: pointer;
+    padding: 5px;
   }
 
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
-  }
-
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-
-  .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+  /* Style pour la liste du menu mobile quand elle est fermée */
+  .navmenu > ul {
+    display: none; /* Par défaut, menu fermé */
     position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
+    top: 80px; /* Distance depuis le haut après le header mobile */
+    left: 0;
+    right: 0;
+    background: #fff; /* Ou une variable si définie */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    margin: 0;
+    list-style: none;
     z-index: 9999;
   }
 
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
-  }
-
-  .mobile-nav-active .navmenu > ul {
+  /* Style pour la liste du menu mobile quand elle est ouverte */
+  .navmenu.mobile-nav-active > ul {
     display: block;
   }
-}
 
+  /* Style pour les éléments de la liste mobile */
+  .navmenu > ul > li {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Style pour les liens du menu mobile */
+  .navmenu > ul > li > a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-family: var(--nav-font);
+    color: var(--nav-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  /* Style pour les liens hover/actifs */
+  .navmenu > ul > li:hover > a,
+  .navmenu > ul > li > a.active {
+    color: var(--nav-hover-color);
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -1036,7 +930,7 @@ section,
   --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 70px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -1067,7 +961,6 @@ section,
 
 .hero-section {
   width: 100%;
-  padding: 35px 20px 0 20px;
   background-color: var(--background-color);
   display: flex;
   align-items: center;
@@ -1077,12 +970,12 @@ section,
 .hero-container {
   width: 90%; /* Augmenté à 90% pour une image plus grande */
   max-width: 1400px; /* Pour limiter sur très grands écrans */
-  margin: 55px auto;
+  margin: 115px 0 0 0;
 }
 
 .hero-image {
   width: 100%;
-  height: 85vh; /* Hauteur fixe pour une image plus grande */
+  height: 75vh; /* Hauteur fixe pour une image plus grande */
   position: relative;
   overflow: hidden;
   border-radius: 15px;
@@ -1123,7 +1016,7 @@ section,
 
 .hero-section h1 {
   margin-bottom: 20px;
-  font-size: 60px;
+  font-size: 56px;
   font-weight: 500;
   color: #ffffff;
   animation: fadeInDown 1s both;
@@ -1284,6 +1177,7 @@ section,
   position: relative;
   transition: all 0.4s ease;
   perspective: 1000px;
+  background-color: #fff0eb;
 }
 
 .value-card-inner {
@@ -1445,7 +1339,7 @@ section,
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  background: var(--background-color);
+  background-color: #fff0eb;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-bottom: 25px;
   height: 100%;
@@ -1608,38 +1502,90 @@ section,
 
 /* Timeline compacte et stylisée */
 .methodology-div {
+  position: relative;
   background-color: var(--background-color);
+  padding: 60px 0;
+  overflow: hidden;
 }
 
 .methodology-div .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 /* Structure de la timeline compacte */
 .compact-timeline {
   position: relative;
-  margin: 30px auto;
-  max-width: 1100px;
+  height: 600px;
 }
 
-/* Conteneur des étapes */
+/* Image de fond avec le chemin */
+.method-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.method-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Positionnement des étapes */
 .timeline-steps {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   position: relative;
-}
-
-/* Étapes individuelles */
-.timeline-step {
-  width: calc(33.33% - 20px);
-  margin-bottom: 30px;
-  position: relative;
+  height: 100%;
   z-index: 2;
 }
 
+/* Styles pour les étapes individuelles */
+.timeline-step {
+  position: absolute;
+  width: 300px;
+}
+
+/* Positionnement spécifique de chaque étape */
+.timeline-step:nth-child(1) {
+  top: 56%;
+  left: -2%;
+}
+
+.timeline-step:nth-child(2) {
+  top: 20%;
+  left: 32%;
+}
+
+.timeline-step:nth-child(3) {
+  top: 50%;
+  left: 53%;
+}
+
+.timeline-step:nth-child(4) {
+  top: 36%;
+  left: 80%;
+}
+
 /* Icône avec numéro */
+.step-number {
+  width: 55px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: #f7d7cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin: 0 auto 15px;
+}
+.step-number span {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
 .step-icon {
   width: 70px;
   height: 70px;
@@ -1648,23 +1594,15 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 15px 35px rgba(217, 100, 58, 0.25);
   transition: all 0.3s ease;
   margin: 0 auto 15px;
 }
 
-.step-icon span {
-  font-size: 28px;
-  font-weight: 500;
-  color: var(--contrast-color);
-}
-
 /* Contenu de l'étape */
 .step-content {
-  padding: 20px;
-  background: var(--surface-color);
+  padding: 10px 20px 20px 20px;
+  background: none;
   border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
   text-align: center;
   min-height: 160px;
@@ -1706,43 +1644,70 @@ section,
 /* Effets au survol */
 .timeline-step:hover .step-icon {
   transform: scale(1.1);
-  box-shadow: 0 15px 35px rgba(217, 100, 58, 0.25);
 }
 
 .timeline-step:hover .step-content {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive */
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .timeline-step {
-    width: calc(50% - 15px);
+    width: 250px;
+  }
+}
+
+@media (max-width: 991px) {
+  .compact-timeline {
+    height: 800px;
   }
 
-  .timeline-line {
-    top: 35px;
-    height: 70%;
+  .timeline-step:nth-child(1) {
+    top: 10%;
+    left: 10%;
+  }
+
+  .timeline-step:nth-child(2) {
+    top: 30%;
+    left: 60%;
+  }
+
+  .timeline-step:nth-child(3) {
+    top: 55%;
+    left: 10%;
+  }
+
+  .timeline-step:nth-child(4) {
+    top: 75%;
+    left: 60%;
   }
 }
 
 @media (max-width: 767px) {
-  .methodology-div .container {
+  .container {
     width: 90%;
   }
 
+  .compact-timeline {
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  .timeline-steps {
+    display: flex;
+    flex-direction: column;
+  }
+
   .timeline-step {
+    position: relative;
     width: 100%;
+    left: 0 !important;
+    top: 0 !important;
     margin-bottom: 40px;
-  }
-
-  .timeline-line {
-    top: 35px;
-    height: 90%;
-  }
-
-  .section-title h2 {
-    font-size: 30px;
   }
 
   .step-content {
@@ -1993,48 +1958,208 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services .service-item {
-  background-color: var(--surface-color);
-  padding: 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  transition: 0.3s;
-  border-radius: 20px;
+
+.service-card {
+  position: relative;
+  transition: all 0.4s ease;
+  margin-bottom: 25px;
+  height: 100%;
 }
 
-.services .service-item .icon {
-  font-size: 36px;
-  line-height: 1;
-  margin-right: 30px;
+/* Container principal - ajouter du padding */
+.col-lg-12 {
+  padding: 20px 40px; /* Ajoute de l'espace sur les côtés */
+}
+
+/* Ajuster la marge entre les cartes */
+.row.gy-4 {
+  margin: 0 auto; /* Centre la rangée */
+  max-width: 1200px; /* Limite la largeur maximale */
+  justify-content: center; /* Centre les cartes horizontalement */
+}
+
+/* Ajouter de l'espace entre les colonnes */
+.col-lg-3.col-md-6 {
+  padding: 15px; /* Augmente l'espace entre les cartes */
+}
+
+.service-card-inner {
+  border-radius: 16px;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  background-color: #fff0eb;
+  padding: 30px 25px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Légère ombre pour détacher les cartes */
+}
+
+.service-card:hover .service-card-inner {
+  transform: translateY(-10px);
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+/* Icon de service - Sans cercle */
+.service-icon {
+  font-size: 24px;
   color: var(--accent-color);
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+  display: inline-block;
 }
 
-.services .service-item .title {
-  font-weight: 500;
-  margin-bottom: 15px;
+.service-icon i {
+  font-size: 30px;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon i {
+  color: white;
+}
+
+/* Titre de service */
+.service-title {
   font-size: 20px;
-}
-
-.services .service-item .title a {
+  font-weight: 500;
   color: var(--heading-color);
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 15px;
+  transition: all 0.3s ease;
+  min-height: 60px;
 }
 
-.services .service-item .description {
-  line-height: 24px;
-  font-size: 16px;
-  margin: 0;
-  text-align: justify;
-}
-.services .service-item .description i {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.services .service-item:hover {
-  border-color: var(--accent-color);
+.service-title::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-color);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
 }
 
-.services .service-item:hover .title a {
+.service-card:hover .service-title {
+  color: white;
+}
+
+.service-card:hover .service-title::after {
+  background: white;
+  width: 60px;
+}
+
+/* Description du service */
+.service-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--default-color);
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+  min-height: 150px;
+}
+
+.service-card:hover .service-text {
+  color: white;
+}
+
+/* Bouton de service */
+.service-btn {
+  display: inline-block;
+  justify-content: space-between;
+  padding: 8px 30px;
+  background-color: var(--accent-color);
+  color: white;
+  border: 1px solid var(--accent-color);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.service-card:hover .service-btn {
+  background-color: white;
   color: var(--accent-color);
+  border-color: white;
+}
+
+.card-accent-bottom {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #d9643a, #f39c72);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .service-card-inner {
+    padding: 25px 20px;
+  }
+
+  .service-text {
+    min-height: 170px;
+  }
+
+  .col-lg-12 {
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .service-title {
+    font-size: 18px;
+    min-height: 70px;
+  }
+
+  .service-text {
+    min-height: 180px;
+  }
+
+  .col-lg-12 {
+    padding: 10px 20px;
+  }
+
+  .col-lg-3.col-md-6 {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-card-inner {
+    padding: 20px 15px;
+  }
+
+  .service-text {
+    font-size: 14px;
+    min-height: 0;
+  }
+
+  .service-title {
+    min-height: 0;
+  }
+
+  .col-lg-12 {
+    padding: 5px 15px;
+  }
+
+  /* Permet aux cards d'être mieux centrées sur mobile */
+  .col-lg-3.col-md-6 {
+    padding: 10px 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2055,9 +2180,9 @@ section,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--accent-color); /* Fond avec accent-color */
+  background: var(--heading-color);
   border-radius: 20px;
-  padding: 80px;
+  padding: 70px;
   overflow: hidden;
   position: relative;
   backdrop-filter: blur(10px);
@@ -2081,18 +2206,34 @@ section,
 
 .cta-content {
   flex: 1;
-  padding-right: 40px;
   position: relative;
   z-index: 2;
+  max-width: 60%;
+}
+
+.cta-img {
+  flex: 0 0 40%;
+  max-width: 40%;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .cta-content h3 {
   font-size: 34px;
   font-weight: 500;
-  color: white; /* Texte blanc pour contraste sur fond accent */
-  margin-bottom: 20px;
+  color: white;
+  margin-bottom: 25px;
   position: relative;
   padding-bottom: 15px;
+  max-width: 500px; /* Limiter la largeur du titre */
 }
 
 .cta-content h3::after {
@@ -2100,24 +2241,23 @@ section,
   position: absolute;
   width: 80px;
   height: 3px;
-  background: white; /* Ligne blanche pour meilleur contraste */
+  background: white;
   bottom: 0;
   left: 0;
 }
 
 .cta-content p {
   font-size: 17px;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9); /* Texte blanc légèrement transparent */
-  margin-bottom: 0;
+  line-height: 1.6; /* Réduire légèrement l'interligne */
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  text-align: left; /* Changé pour un meilleur alignement de texte compact */
+  max-width: 450px; /* Limiter la largeur pour forcer des retours à la ligne */
+  display: block; /* Assurer que le bloc prend la largeur définie */
 }
 
 .cta-button-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 30px;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
 }
 
 .cta-btn {
@@ -2129,8 +2269,8 @@ section,
   justify-content: center;
   padding: 16px 36px;
   border-radius: 50px;
-  background: white; /* Bouton blanc pour contraster avec fond accent */
-  color: var(--accent-color); /* Texte de couleur accent */
+  background: white;
+  color: var(--accent-color);
   text-decoration: none;
   box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
@@ -2159,6 +2299,8 @@ section,
 .cta-btn:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.4);
+  background-color: var(--accent-color);
+  color: white;
 }
 
 .cta-btn:hover::before {
@@ -2169,13 +2311,22 @@ section,
 @media (max-width: 991px) {
   .cta-container {
     flex-direction: column;
-    padding: 40px 30px;
+    padding: 50px 40px;
+    gap: 40px;
   }
 
-  .cta-content {
+  .cta-content,
+  .cta-img {
+    max-width: 100%;
     padding-right: 0;
     text-align: center;
-    margin-bottom: 30px;
+  }
+
+  .cta-content h3,
+  .cta-content p {
+    max-width: 500px; /* Plus large sur tablette mais toujours contrôlé */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .cta-content h3::after {
@@ -2183,34 +2334,37 @@ section,
     transform: translateX(-50%);
   }
 
-  .cta-button-container {
-    padding-left: 0;
-    border-left: none;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    width: 100%;
+  .cta-img {
+    order: -1;
+    margin-bottom: 10px;
   }
 
-  .cta-btn {
-    width: 100%;
+  .cta-img img {
+    max-width: 70%;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 767px) {
-  .call-to-action {
-    padding: 60px 0;
-  }
-
   .cta-container {
-    padding: 30px 25px;
+    padding: 40px 25px;
   }
 
   .cta-content h3 {
     font-size: 28px;
+    margin-bottom: 20px;
+    max-width: 100%; /* Pleine largeur sur mobile */
   }
 
   .cta-content p {
     font-size: 16px;
+    margin-bottom: 25px;
+    text-align: left;
+    max-width: 100%; /* Pleine largeur sur mobile */
+  }
+
+  .cta-img img {
+    max-width: 100%;
   }
 }
 /*--------------------------------------------------------------
@@ -2221,38 +2375,82 @@ section,
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
-  padding: 0;
-  font-size: 16px;
+  padding: 10px 20px;
+  font-size: 15px;
   font-weight: 500;
-  margin: 0 10px;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+  background-color: #f1f1f1;
+  color: #333;
 }
 
-.portfolio .portfolio-filters li:hover,
+/* Style pour le premier élément (Tenue corporate) */
+.portfolio .portfolio-filters li[data-filter=".filter-app"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Style pour le deuxième élément (Goodies) */
+.portfolio .portfolio-filters li[data-filter=".filter-product"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Style pour le troisième élément (Design d'identité visuelle) */
+.portfolio .portfolio-filters li[data-filter=".filter-branding"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Style pour le quatrième élément (Corporate event) */
+.portfolio .portfolio-filters li[data-filter=".filter-books"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Style pour "Tout" */
+.portfolio .portfolio-filters li[data-filter="*"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Effet hover et filtre actif */
+.portfolio .portfolio-filters li:hover {
+  background-color: #e8e8e8;
+}
+
 .portfolio .portfolio-filters li.filter-active {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: white;
 }
 
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 0;
+@media (max-width: 768px) {
+  .portfolio .portfolio-filters li {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .portfolio .portfolio-filters {
+    gap: 8px;
   }
 }
 

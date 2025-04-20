@@ -49,32 +49,25 @@
   <body class="index-page">
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
-        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+        class="container-fluid container-xl position-relative align-items-center justify-content-between"
       >
         <nav id="navmenu" class="navmenu">
-          <!-- Version desktop du menu avec logo au centre -->
+          <!-- Version desktop du menu avec logo à gauche -->
           <div class="nav-container">
-            <!-- Liens à gauche du logo -->
-            <div class="nav-left">
-              <ul>
-                <li><a href="#hero" class="active">Menu</a></li>
-                <li><a href="#about">À Propos</a></li>
-                <li><a href="#method">Méthodologie</a></li>
-              </ul>
-            </div>
-
-            <!-- Logo au milieu -->
+            <!-- Logo à gauche -->
             <div class="nav-logo">
               <a href="index.html" class="logo d-flex align-items-center">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
                 <img src="assets/img/Logo-TRALAI.png" alt="" />
                 <!--  <h1 class="sitename">TRALAI</h1>-->
               </a>
             </div>
 
-            <!-- Liens à droite du logo -->
-            <div class="nav-right">
+            <!-- Tous les liens à droite du logo -->
+            <div class="nav-links">
               <ul>
+                <li><a href="#hero" class="active">Menu</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#method">Méthodologie</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -84,12 +77,12 @@
 
           <!-- Version mobile: bouton toggle à gauche et logo à droite -->
           <div class="mobile-header">
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             <div class="mobile-logo">
               <a href="index.html" class="d-flex align-items-center">
                 <img src="assets/img/Logo-TRALAI.png" alt="" />
               </a>
             </div>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </div>
 
           <!-- Liste pour la version mobile -->
@@ -433,18 +426,24 @@
           </div>
 
           <div class="compact-timeline">
+            <div class="method-img">
+              <img src="assets/img/methodo-background.png" alt="Methodology" />
+            </div>
             <!-- Étapes -->
             <div class="timeline-steps">
               <!-- Étape 1 -->
               <div class="timeline-step" data-aos="fade-up">
+                <div class="step-number">
+                  <span>01.</span>
+                </div>
                 <div class="step-icon">
-                  <span>1</span>
+                  <img src="assets/img/icons/icon-method-1.svg" alt="Step 1" />
                 </div>
                 <div class="step-content">
-                  <h3>Brief client</h3>
+                  <h3>Comprendre vos besoins</h3>
                   <p>
-                    On vous écoute, vraiment. Nous échangeons avec vous pour
-                    bien comprendre vos besoins, vos défis et vos objectifs.
+                    Lorem ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </p>
                 </div>
               </div>
@@ -455,15 +454,17 @@
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
+                <div class="step-number">
+                  <span>02.</span>
+                </div>
                 <div class="step-icon">
-                  <span>2</span>
+                  <img src="assets/img/icons/icon-method-2.svg" alt="" />
                 </div>
                 <div class="step-content">
-                  <h3>Compréhension des besoins</h3>
+                  <h3>Prototyper</h3>
                   <p>
-                    Traduire vos idées en intentions de design. Nous identifions
-                    les meilleures solutions pour traduire vos valeurs en
-                    designs percutants.
+                    Lorem ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </p>
                 </div>
               </div>
@@ -474,15 +475,17 @@
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
+                <div class="step-number">
+                  <span>03.</span>
+                </div>
                 <div class="step-icon">
-                  <span>3</span>
+                  <img src="assets/img/icons/icon-method-3.svg" alt="" />
                 </div>
                 <div class="step-content">
-                  <h3>Rapport de compréhension</h3>
+                  <h3>Produire</h3>
                   <p>
-                    Valider qu'on est sur la même longueur d'ondes. Une analyse
-                    détaillée pour aligner nos visions avant de passer à
-                    l'action.
+                    Lorem ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </p>
                 </div>
               </div>
@@ -493,53 +496,17 @@
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
+                <div class="step-number">
+                  <span>04.</span>
+                </div>
                 <div class="step-icon">
-                  <span>4</span>
+                  <img src="assets/img/icons/icon-method-4.svg" alt="" />
                 </div>
                 <div class="step-content">
-                  <h3>Propositions & livrables</h3>
+                  <h3>Implementer</h3>
                   <p>
-                    Des propositions qui vous ressemblent. Nous concevons des
-                    propositions visuelles et sensorielles adaptées à vos
-                    besoins spécifiques.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Étape 5 -->
-              <div
-                class="timeline-step"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <div class="step-icon">
-                  <span>5</span>
-                </div>
-                <div class="step-content">
-                  <h3>Recette</h3>
-                  <p>
-                    Tester, ajuster, valider. Nous affinons les propositions
-                    pour s'assurer qu'elles répondent parfaitement à vos
-                    attentes.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Étape 6 -->
-              <div
-                class="timeline-step"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <div class="step-icon">
-                  <span>6</span>
-                </div>
-                <div class="step-content">
-                  <h3>Production & déploiement</h3>
-                  <p>
-                    Nous vous accompagnons jusqu'au bout. De la fabrication à la
-                    livraison, nous gérons l'intégration parfaite de votre
-                    projet.
+                    Lorem ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </p>
                 </div>
               </div>
@@ -656,102 +623,100 @@
         </div>
         <!-- End Section Title -->
 
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <i class="fas fa-tshirt icon flex-shrink-0"></i>
-                <div>
-                  <h4 class="title">
-                    <a href="service-details.html" class="stretched-link"
-                      >Tenues corporate</a
+        <div class="container-fluid service-section">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-lg-3">
+                <div class="service-card">
+                  <div class="service-card-inner">
+                    <div class="card-header">
+                      <div class="service-icon">
+                        <i class="fas fa-tshirt"></i>
+                      </div>
+                    </div>
+                    <h5 class="service-title">Tenues corporate</h5>
+                    <p class="service-text">
+                      Chez TRALAI, nous concevons et imprimons des vêtements
+                      personnalisés (polos, t-shirts, chemises) à l'image de
+                      votre marque ou de vos événements. Offrez à vos équipes
+                      une tenue qui parle pour vous.
+                    </p>
+                    <a href="service-details.html" class="service-btn"
+                      >Découvrir ></a
                     >
-                  </h4>
-                  <p class="description">
-                    <strong
-                      >Personnalisé et impression de tenues qui incarnent votre
-                      identité.</strong
-                    >
-                    <br />
-                    Chez TRALAI, nous concevons et imprimons des vêtements
-                    personnalisés (polos, t-shirts, chemises) à l’image de votre
-                    marque ou de vos événements. Offrez à vos équipes une tenue
-                    qui parle pour vous.
-                  </p>
+                    <div class="card-accent-bottom"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- End Service Item -->
 
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-item d-flex position-relative h-100">
-                <i class="fas fa-gift icon flex-shrink-0"></i>
-                <div>
-                  <h4 class="title">
-                    <a href="service-details.html" class="stretched-link"
-                      >Goodies/ Accessoires</a
+              <div class="col-lg-3">
+                <div class="service-card">
+                  <div class="service-card-inner">
+                    <div class="card-header">
+                      <div class="service-icon">
+                        <i class="fas fa-gift"></i>
+                      </div>
+                    </div>
+                    <h5 class="service-title">Goodies & Accessoires</h5>
+                    <p class="service-text">
+                      TRALAI conçoit des goodies et accessoires personnalisés
+                      qui renforcent votre image de marque et laissent une
+                      impression durable, en toutes occasions.
+                    </p>
+                    <a href="service-details.html" class="service-btn"
+                      >Découvrir ></a
                     >
-                  </h4>
-                  <p class="description">
-                    <strong>
-                      Des objets et accessoires qui parlent de vous.
-                    </strong>
-                    <br />
-                    TRALAI conçoit des goodies et accessoires personnalisés qui
-                    renforcent votre image de marque et laissent une impression
-                    durable, en toutes occasions.
-                  </p>
+                    <div class="card-accent-bottom"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- End Service Item -->
 
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="service-item d-flex position-relative h-100">
-                <i class="fas fa-building icon flex-shrink-0"></i>
-                <div>
-                  <h4 class="title">
-                    <a href="service-details.html" class="stretched-link"
-                      >Aménagement d’espaces de travail</a
+              <div class="col-lg-3">
+                <div class="service-card">
+                  <div class="service-card-inner">
+                    <div class="card-header">
+                      <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                      </div>
+                    </div>
+                    <h5 class="service-title">Design d'espace de travail</h5>
+                    <p class="service-text">
+                      Nous repensons vos bureaux pour incarner vos valeurs et
+                      créer un environnement de travail inspirant, fonctionnel
+                      et aligné avec votre culture d'entreprise.
+                    </p>
+                    <a href="service-details.html" class="service-btn"
+                      >Découvrir ></a
                     >
-                  </h4>
-                  <p class="description">
-                    <strong>
-                      Des espaces de travail qui incarnent votre ADN.
-                    </strong>
-                    <br />
-                    TRALAI repense vos bureaux pour incarner vos valeurs et
-                    créer un environnement de travail inspirant, fonctionnel et
-                    aligné avec votre culture d’entreprise.
-                  </p>
+                    <div class="card-accent-bottom"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- End Service Item -->
 
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-              <div class="service-item d-flex position-relative h-100">
-                <i class="fas fa-champagne-glasses icon flex-shrink-0"></i>
-                <div>
-                  <h4 class="title">
-                    <a href="service-details.html" class="stretched-link"
-                      >Organisation d’événements internes</a
+              <div class="col-lg-3">
+                <div class="service-card">
+                  <div class="service-card-inner">
+                    <div class="card-header">
+                      <div class="service-icon">
+                        <i class="fas fa-champagne-glasses"></i>
+                      </div>
+                    </div>
+                    <h5 class="service-title">
+                      Organisation d'event corporate
+                    </h5>
+                    <p class="service-text">
+                      Avec TRALAI, concever et organiser vos événements internes
+                      sur mesure pour renforcer la cohésion, valoriser vos
+                      équipes et faire rayonner votre culture d'entreprise.
+                    </p>
+                    <a href="service-details.html" class="service-btn"
+                      >Découvrir ></a
                     >
-                  </h4>
-                  <p class="description">
-                    <strong>
-                      Des événements qui renforcent la culture de votre
-                      entreprise.
-                    </strong>
-                    <br />
-                    TRALAI conçoit et organise vos événements internes sur
-                    mesure pour renforcer la cohésion, valoriser vos équipes et
-                    faire rayonner votre culture d’entreprise.
-                  </p>
+                    <div class="card-accent-bottom"></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- End Service Item -->
           </div>
         </div>
       </section>
@@ -762,15 +727,17 @@
         <div class="container">
           <div class="cta-container" data-aos="fade-up">
             <div class="cta-content">
-              <h3>Contactez-nous sans tarder</h3>
+              <h3>Prenons un café, discutons de vos besoins</h3>
               <p>
                 Une idée, un projet, une ambition ? Chez TRALAI, chaque échange
                 est une opportunité de créer quelque chose d'unique.
-                Contactez-nous dès aujourd'hui et donnons vie à vos idées.
               </p>
+              <div class="cta-button-container">
+                <a class="cta-btn" href="#contact">Contactez-nous</a>
+              </div>
             </div>
-            <div class="cta-button-container">
-              <a class="cta-btn" href="#contact">Demander un devis</a>
+            <div class="cta-img">
+              <img src="assets/img/cta-img.png" alt="call-to-action" />
             </div>
           </div>
         </div>
@@ -804,10 +771,12 @@
               data-aos-delay="100"
             >
               <li data-filter="*" class="filter-active">Tout</li>
-              <li data-filter=".filter-app">Apps</li>
-              <li data-filter=".filter-product">Produits</li>
-              <li data-filter=".filter-branding">Marques</li>
-              <li data-filter=".filter-books">Livres</li>
+              <li data-filter=".filter-app">Tenue corporate</li>
+              <li data-filter=".filter-product">Goodies</li>
+              <li data-filter=".filter-branding">
+                Design d'indentité visuelle
+              </li>
+              <li data-filter=".filter-books">Corporate event</li>
             </ul>
             <!-- End Portfolio Filters -->
 

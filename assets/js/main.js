@@ -28,46 +28,38 @@
 
   document.addEventListener("scroll", toggleScrolled);
   window.addEventListener("load", toggleScrolled);
+
   /**
    * Mobile Navigation
    */
-  const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
-  const mobileLogo = document.querySelector(".mobile-logo");
+  document.addEventListener("DOMContentLoaded", function () {
+    // Sélectionner le bouton de toggle et le menu
+    const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+    const navmenu = document.getElementById("navmenu");
 
-  function mobileNavToogle() {
-    // Cacher immédiatement le logo avant tout autre changement
-    if (mobileLogo) {
-      mobileLogo.style.display = "none";
-    }
+    // Ajouter un événement de clic pour ouvrir/fermer le menu
+    mobileNavToggle.addEventListener("click", function () {
+      // Toggle la classe pour l'état actif du menu
+      navmenu.classList.toggle("mobile-nav-active");
 
-    // Appliquer ensuite les autres changements
-    document.querySelector("body").classList.toggle("mobile-nav-active");
-    mobileNavToggleBtn.classList.toggle("bi-list");
-    mobileNavToggleBtn.classList.toggle("bi-x");
-
-    // Si on ferme le menu, réafficher le logo après un court délai
-    if (
-      !document.querySelector("body").classList.contains("mobile-nav-active") &&
-      mobileLogo
-    ) {
-      setTimeout(() => {
-        mobileLogo.style.display = "";
-      }, 300); // Délai pour laisser l'animation de fermeture se terminer
-    }
-  }
-
-  if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
-  }
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll("#navmenu a").forEach((navmenu) => {
-    navmenu.addEventListener("click", () => {
-      if (document.querySelector(".mobile-nav-active")) {
-        mobileNavToogle();
+      // Changer l'icône du bouton (de hamburger à X)
+      if (navmenu.classList.contains("mobile-nav-active")) {
+        mobileNavToggle.classList.remove("bi-list");
+        mobileNavToggle.classList.add("bi-x");
+      } else {
+        mobileNavToggle.classList.remove("bi-x");
+        mobileNavToggle.classList.add("bi-list");
       }
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    const navLinks = document.querySelectorAll(".navmenu > ul > li > a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        navmenu.classList.remove("mobile-nav-active");
+        mobileNavToggle.classList.remove("bi-x");
+        mobileNavToggle.classList.add("bi-list");
+      });
     });
   });
 
@@ -247,16 +239,15 @@
    */
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Sélectionner tous les liens de navigation
+    // Modifier le sélecteur pour cibler les liens dans la nouvelle structure
     const navLinks = document.querySelectorAll(
-      ".nav-left ul li a, .nav-right ul li a"
+      ".nav-links ul li a, .navmenu > ul li a"
     );
 
-    // Récupérer les sections cibles à partir des liens (href des liens)
+    // Le reste du code pour récupérer les sections reste identique
     const sections = [];
     navLinks.forEach((link) => {
       const href = link.getAttribute("href");
-      // Vérifier si le href est une ancre vers une section
       if (href && href.startsWith("#") && href.length > 1) {
         const section = document.querySelector(href);
         if (section) {
@@ -267,10 +258,8 @@
 
     // Fonction pour déterminer quelle section est actuellement visible
     function getCurrentSection() {
-      // Position de défilement actuelle (haut de l'écran) + une marge
-      const scrollPosition = window.scrollY + 100; // 100px de marge pour considérer la section comme active un peu avant
+      const scrollPosition = window.scrollY + 100;
 
-      // Trouver la section actuellement visible
       for (let i = 0; i < sections.length; i++) {
         const section = sections[i];
         const sectionTop = section.offsetTop;
@@ -284,7 +273,6 @@
         }
       }
 
-      // Si aucune section n'est trouvée, retourner null
       return null;
     }
 
@@ -318,19 +306,11 @@
           const targetSection = document.querySelector(href);
 
           if (targetSection) {
-            // Option 1: Défilement simple vers la section
             window.scrollTo({
               top: targetSection.offsetTop,
               behavior: "smooth",
             });
 
-            // Option 2: Si vous utilisez une navigation fixe, vous devrez peut-être ajuster la position
-            // window.scrollTo({
-            //   top: targetSection.offsetTop - HAUTEUR_DE_VOTRE_NAVBAR,
-            //   behavior: 'smooth'
-            // });
-
-            // Mettre à jour les liens actifs après le clic
             setTimeout(updateActiveLinks, 500);
           }
         }
