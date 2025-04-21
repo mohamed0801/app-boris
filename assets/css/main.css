@@ -283,7 +283,6 @@ h6 {
   .navmenu > ul {
     display: none; /* Par défaut, menu fermé */
     position: absolute;
-    top: 80px; /* Distance depuis le haut après le header mobile */
     left: 0;
     right: 0;
     background: #fff; /* Ou une variable si définie */
@@ -331,7 +330,7 @@ h6 {
 .footer {
   color: var(--default-color);
   background-color: #faf8f5; /*var(--background-color);*/
-  font-size: 14px;
+  font-size: 13px;
   position: relative;
 }
 
@@ -946,7 +945,7 @@ section,
   letter-spacing: 1px;
   display: inline-block;
   padding: 14px 32px;
-  border-radius: 50px;
+  border-radius: 10px;
   transition: all 0.3s ease;
   text-decoration: none;
   width: fit-content;
@@ -1081,12 +1080,12 @@ section,
   position: relative;
   transition: all 0.4s ease;
   perspective: 1000px;
-  background-color: #fff0eb;
 }
 
 .value-card-inner {
   border-radius: 16px;
   border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  background-color: #fff0eb;
   backdrop-filter: blur(5px);
   padding: 35px 30px;
   transition: all 0.4s ease;
@@ -1095,6 +1094,7 @@ section,
   height: 100%;
   transform-style: preserve-3d;
   z-index: 1;
+  background-color: #fff0eb;
 }
 
 .value-card:hover .value-card-inner {
@@ -1245,7 +1245,6 @@ section,
   position: relative;
   background-color: #fff0eb;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  margin-bottom: 25px;
   height: 100%;
   border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
@@ -2053,7 +2052,7 @@ section,
   background-color: var(--accent-color);
   color: white;
   border: 1px solid var(--accent-color);
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -2346,6 +2345,7 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -2411,22 +2411,65 @@ section,
   color: white;
 }
 
-@media (max-width: 768px) {
-  .portfolio .portfolio-filters li {
-    padding: 8px 16px;
-    font-size: 14px;
+@media (max-width: 767px) {
+  /* Force 2 colonnes sur petit écran */
+  .portfolio .isotope-container .portfolio-item {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    padding: 0 5px;
+  }
+
+  /* Ajuster les marges et le padding pour l'affichage mobile */
+  .portfolio .portfolio-item .portfolio-info {
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  .portfolio .isotope-container {
+    margin: 0 -5px;
   }
 }
 
+/* Pour les très petits écrans, ajustement du texte et des boutons */
 @media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    padding: 6px 12px;
-    font-size: 13px;
-    margin-bottom: 8px;
+  .portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 16px;
+    padding-right: 40px;
   }
 
-  .portfolio .portfolio-filters {
-    gap: 8px;
+  .portfolio .portfolio-item .portfolio-info p {
+    font-size: 12px;
+    padding-right: 40px;
+  }
+
+  .portfolio .portfolio-item .portfolio-info .preview-link,
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    right: 40px;
+    font-size: 20px;
+  }
+
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    right: 10px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+  /* Force 3 colonnes sur très petit écran */
+  .portfolio .isotope-container .portfolio-item {
+    width: 33.333% !important;
+    max-width: 33.333% !important;
+    flex: 0 0 33.333% !important;
+  }
+
+  /* Cacher le texte sur très petits écrans pour économiser l'espace */
+  .portfolio .portfolio-item .portfolio-info p {
+    display: none;
+  }
+
+  .portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 14px;
   }
 }
 
@@ -2521,7 +2564,7 @@ section,
 }
 
 .contact .php-email-form {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--light-bg);
   padding: 30px;
   margin-top: 30px;
 }
@@ -2557,7 +2600,7 @@ section,
 .contact .php-email-form input[type="text"]::placeholder,
 .contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
 .contact .php-email-form button[type="submit"] {
@@ -2566,7 +2609,7 @@ section,
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
@@ -3118,7 +3161,7 @@ textarea.form-control {
   background-color: var(--accent-color);
   color: white;
   border: none;
-  border-radius: 50px;
+  border-radius: 10px;
   padding: 14px 30px;
   font-weight: 500;
   transition: all 0.3s;
