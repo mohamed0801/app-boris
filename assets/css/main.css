@@ -342,7 +342,7 @@ h6 {
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .footer .footer-about .logo img {
@@ -973,6 +973,7 @@ section,
 
   .hero-container {
     width: 95%;
+    margin: 85px 0 0 0;
   }
 
   .hero-content {
