@@ -345,26 +345,26 @@
         title: "Création de goodies et accessoires impactants",
         image: "assets/img/services.jpg",
         description:
-          "Nous imaginons et créons des goodies, objets publicitaires et accessoires personnalisés qui renforcent l’image de votre entreprise et marquent les esprits de vos collaborateurs et clients. Que ce soit pour un événement spécial ou comme élément permanent de votre communication, nous vous offrons des solutions uniques.",
+          "Nous imaginons et créons des goodies, objets publicitaires et accessoires personnalisés qui renforcent l'image de votre entreprise et marquent les esprits de vos collaborateurs et clients. Que ce soit pour un événement spécial ou comme élément permanent de votre communication, nous vous offrons des solutions uniques.",
         points: [
           "Personnalisation : chaque objet est conçu sur mesure, pour refléter vos valeurs et votre identité visuelle",
           "Créativité : des designs originaux et innovants qui se démarquent",
-          "Impact durable : des accessoires pratiques et esthétiques qui laissent une empreinte dans l’esprit de vos publics",
+          "Impact durable : des accessoires pratiques et esthétiques qui laissent une empreinte dans l'esprit de vos publics",
         ],
       },
       espaces: {
-        title: "Aménagement d’espaces de travail qui inspirent",
+        title: "Aménagement d'espaces de travail qui inspirent",
         image: "assets/img/services.jpg",
         description:
-          "Nous transformons vos bureaux et espaces de coworking pour qu&#39;ils reflètent l&#39;identité et les valeurs de votre entreprise. Chaque projet d'aménagement est conçu pour offrir un environnement de travail stimulant, fonctionnel et inspirant, en parfaite adéquationavec votre culture d'entreprise.",
+          "Nous transformons vos bureaux et espaces de coworking pour qu'ils reflètent l'identité et les valeurs de votre entreprise. Chaque projet d'aménagement est conçu pour offrir un environnement de travail stimulant, fonctionnel et inspirant, en parfaite adéquation avec votre culture d'entreprise.",
         points: [
           "Design fonctionnel et esthétique : chaque espace est pensé pour optimiser l'usage tout en renforçant votre image",
-          "Ambiance sur mesure : création d’un environnement de travail inspirant qui motive vos équipes",
+          "Ambiance sur mesure : création d'un environnement de travail inspirant qui motive vos équipes",
           "Conseils experts : ergonomie, choix des matériaux, agencement et décoration adaptés à vos besoins",
         ],
       },
       evenements: {
-        title: "Organisation d’événements internes marquants",
+        title: "Organisation d'événements internes marquants",
         image: "assets/img/services.jpg",
         description:
           "Nous organisons des événements internes sur mesure, tels que des séminaires stratégiques, des ateliers de teambuilding ou des sessions de formation, pour créer des moments mémorables qui renforcent la cohésion de vos équipes et véhiculent les valeurs de votre entreprise.",
@@ -385,25 +385,32 @@
       link.addEventListener("click", function (e) {
         e.preventDefault();
 
-        // Sécurité : on vérifie si un lien actif existe avant de retirer la classe
+        // Retirer la classe active de tous les liens
         const currentActive = document.querySelector(".services-list a.active");
         if (currentActive) currentActive.classList.remove("active");
 
+        // Ajouter la classe active au lien cliqué
         this.classList.add("active");
 
-        const key = this.textContent.trim().toLowerCase();
+        // Récupérer le type de service depuis l'attribut data-service
+        const serviceKey = this.getAttribute("data-service");
 
-        let serviceKey = "";
-        if (key.includes("tenues")) serviceKey = "tenues";
-        else if (key.includes("goodies")) serviceKey = "goodies";
-        else if (key.includes("espaces")) serviceKey = "espaces";
-        else if (key.includes("événements")) serviceKey = "evenements";
+        // Si aucun attribut data-service n'est trouvé, utiliser le texte du lien
+        if (!serviceKey) {
+          const key = this.textContent.trim().toLowerCase();
+
+          if (key.includes("tenues")) serviceKey = "tenues";
+          else if (key.includes("goodies")) serviceKey = "goodies";
+          else if (key.includes("espaces")) serviceKey = "espaces";
+          else if (key.includes("événements") || key.includes("evenements"))
+            serviceKey = "evenements";
+        }
 
         const service = services[serviceKey];
         if (!service) return;
 
         // Animation fluide
-        const fadeTarget = document.querySelector("#service-details .col-lg-7");
+        const fadeTarget = document.querySelector(".content-container");
         fadeTarget.style.opacity = 0;
 
         setTimeout(() => {

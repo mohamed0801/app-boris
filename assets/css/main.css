@@ -2725,41 +2725,130 @@ section,
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
+/* Style moderne pour la liste de services détaillés en horizontal */
 .service-details .services-list {
-  background-color: var(--surface-color);
-  padding: 10px 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  flex-wrap: wrap;
 }
 
+/* Design horizontal de carte avec effet 3D */
 .service-details .services-list a {
-  display: block;
-  line-height: 1;
-  padding: 8px 0 8px 15px;
-  border-left: 3px solid
-    color-mix(in srgb, var(--default-color), transparent 70%);
-  margin: 20px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
-}
-
-.service-details .services-list a.active {
-  color: var(--heading-color);
+  width: calc(25% - 15px);
+  min-width: 200px;
+  height: 110px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--default-color);
+  background: #fff0eb;
+  position: relative;
+  overflow: hidden;
   font-weight: 500;
-  border-color: var(--accent-color);
 }
 
+/* Effet de surbrillance au hover */
 .service-details .services-list a:hover {
-  border-color: var(--accent-color);
+  transform: translateY(-5px);
+  color: var(--accent-color);
 }
 
+/* Nouvel élément actif avec bordure colorée */
+.service-details .services-list a.active {
+  background: #fff;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  font-weight: 500;
+}
+
+/* Nouvel agencement des icônes */
+.service-details .services-list a i {
+  font-size: 24px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #faf8f5;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.service-details .services-list a.active i {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Responsive design amélioré */
+@media (max-width: 991px) {
+  .service-details .services-list {
+    flex-wrap: wrap;
+  }
+
+  .service-details .services-list a {
+    width: calc(50% - 10px);
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-details .services-list a {
+    width: calc(50% - 8px);
+    min-width: 160px;
+    height: 100px;
+    padding: 12px;
+  }
+
+  .service-details .services-list a i {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .service-details .services-list a {
+    width: 100%;
+    height: 90px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .service-details .services-list a i {
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }
+}
+
+/* Le reste de votre CSS reste inchangé */
 .service-details .services-img {
   margin-bottom: 20px;
+  display: block;
+  max-width: 100%;
 }
 
 .service-details h3 {
   font-size: 24px;
   font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .service-details h4 {
@@ -2788,13 +2877,6 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }
 
 /*--------------------------------------------------------------
