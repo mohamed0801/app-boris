@@ -268,7 +268,7 @@ h6 {
 
   /* Style pour le logo mobile */
   .mobile-logo img {
-    max-height: 50px;
+    max-height: 40px;
   }
 
   /* Bouton toggle pour le menu mobile */
@@ -2370,109 +2370,7 @@ section,
   background-color: #f1f1f1;
   color: #333;
 }
-
-/* Style pour le premier élément (Tenue corporate) */
-.portfolio .portfolio-filters li[data-filter=".filter-app"] {
-  background-color: #f1f1f1;
-  color: #333;
-}
-
-/* Style pour le deuxième élément (Goodies) */
-.portfolio .portfolio-filters li[data-filter=".filter-product"] {
-  background-color: #f1f1f1;
-  color: #333;
-}
-
-/* Style pour le troisième élément (Design d'identité visuelle) */
-.portfolio .portfolio-filters li[data-filter=".filter-branding"] {
-  background-color: #f1f1f1;
-  color: #333;
-}
-
-/* Style pour le quatrième élément (Corporate event) */
-.portfolio .portfolio-filters li[data-filter=".filter-books"] {
-  background-color: #f1f1f1;
-  color: #333;
-}
-
-/* Style pour "Tout" */
-.portfolio .portfolio-filters li[data-filter="*"] {
-  background-color: #f1f1f1;
-  color: #333;
-}
-
-/* Effet hover et filtre actif */
-.portfolio .portfolio-filters li:hover {
-  background-color: #e8e8e8;
-}
-
-.portfolio .portfolio-filters li.filter-active {
-  background-color: var(--accent-color);
-  color: white;
-}
-
-@media (max-width: 767px) {
-  /* Force 2 colonnes sur petit écran */
-  .portfolio .isotope-container .portfolio-item {
-    width: 50% !important;
-    max-width: 50% !important;
-    flex: 0 0 50% !important;
-    padding: 0 5px;
-  }
-
-  /* Ajuster les marges et le padding pour l'affichage mobile */
-  .portfolio .portfolio-item .portfolio-info {
-    left: 10px;
-    right: 10px;
-    padding: 10px;
-  }
-
-  .portfolio .isotope-container {
-    margin: 0 -5px;
-  }
-}
-
-/* Pour les très petits écrans, ajustement du texte et des boutons */
-@media (max-width: 575px) {
-  .portfolio .portfolio-item .portfolio-info h4 {
-    font-size: 16px;
-    padding-right: 40px;
-  }
-
-  .portfolio .portfolio-item .portfolio-info p {
-    font-size: 12px;
-    padding-right: 40px;
-  }
-
-  .portfolio .portfolio-item .portfolio-info .preview-link,
-  .portfolio .portfolio-item .portfolio-info .details-link {
-    right: 40px;
-    font-size: 20px;
-  }
-
-  .portfolio .portfolio-item .portfolio-info .details-link {
-    right: 10px;
-    font-size: 24px;
-  }
-}
-@media (max-width: 480px) {
-  /* Force 3 colonnes sur très petit écran */
-  .portfolio .isotope-container .portfolio-item {
-    width: 33.333% !important;
-    max-width: 33.333% !important;
-    flex: 0 0 33.333% !important;
-  }
-
-  /* Cacher le texte sur très petits écrans pour économiser l'espace */
-  .portfolio .portfolio-item .portfolio-info p {
-    display: none;
-  }
-
-  .portfolio .portfolio-item .portfolio-info h4 {
-    font-size: 14px;
-  }
-}
-
+/* Styles originaux desktop - inchangés */
 .portfolio .portfolio-item {
   position: relative;
 }
@@ -2526,6 +2424,145 @@ section,
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
   bottom: 20px;
+}
+/* Style pour le premier élément (Tenue corporate) */
+.portfolio .portfolio-filters li[data-filter=".filter-app"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Style pour le deuxième élément (Goodies) */
+.portfolio .portfolio-filters li[data-filter=".filter-product"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Style pour le troisième élément (Design d'identité visuelle) */
+.portfolio .portfolio-filters li[data-filter=".filter-branding"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Style pour le quatrième élément (Corporate event) */
+.portfolio .portfolio-filters li[data-filter=".filter-books"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Style pour "Tout" */
+.portfolio .portfolio-filters li[data-filter="*"] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Effet hover et filtre actif */
+.portfolio .portfolio-filters li:hover {
+  background-color: #e8e8e8;
+}
+
+.portfolio .portfolio-filters li.filter-active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Modifications pour tablettes et petits écrans */
+@media (max-width: 767px) {
+  /* Grille 2 colonnes sur écran moyen */
+  .portfolio .isotope-container .portfolio-item {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    padding: 0 5px;
+  }
+
+  .portfolio .isotope-container {
+    margin: 0 -5px;
+  }
+
+  /* Simplifier l'affichage des infos sur mobile */
+  .portfolio .portfolio-item .portfolio-info {
+    left: 5px;
+    right: 5px;
+    padding: 8px;
+  }
+
+  /* Simplifier l'effet hover sur mobile */
+  .portfolio .portfolio-item:hover .portfolio-info {
+    bottom: 10px;
+  }
+}
+
+/* Pour les petits téléphones */
+@media (max-width: 575px) {
+  /* Grille 2 colonnes mais plus simple */
+  .portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 14px;
+    padding-right: 45px;
+    margin-bottom: 0;
+  }
+
+  /* Masquer la description */
+  .portfolio .portfolio-item .portfolio-info p {
+    display: none;
+  }
+
+  /* Réduire la taille des icônes */
+  .portfolio .portfolio-item .portfolio-info .preview-link {
+    right: 30px;
+    font-size: 16px;
+  }
+
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    right: 5px;
+    font-size: 20px;
+  }
+}
+
+/* Pour très petits écrans */
+@media (max-width: 480px) {
+  /* Grille 3 colonnes très simplifiée */
+  .portfolio .isotope-container .portfolio-item {
+    width: 33.333% !important;
+    max-width: 33.333% !important;
+    flex: 0 0 33.333% !important;
+    padding: 0 3px;
+  }
+
+  .portfolio .isotope-container {
+    margin: 0 -3px;
+  }
+
+  /* Info au survol ultra-simplifiée */
+  .portfolio .portfolio-item .portfolio-info {
+    padding: 5px;
+    left: 3px;
+    right: 3px;
+  }
+
+  .portfolio .portfolio-item:hover .portfolio-info {
+    bottom: 5px;
+  }
+
+  .portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 11px;
+    padding-right: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Réduire encore les icônes */
+  .portfolio .portfolio-item .portfolio-info .preview-link {
+    right: 17px;
+    top: 4px;
+    font-size: 13px;
+  }
+
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    right: 0px;
+    top: 4px;
+    font-size: 15px;
+  }
 }
 
 /*--------------------------------------------------------------
