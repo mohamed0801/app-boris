@@ -12,15 +12,21 @@
 --------------------------------------------------------------*/
 /* Fonts */
 @font-face {
-  font-family: "circular-std-medium-500";
-  src: url("../fonts/circular-std-medium-500.ttf") format("truetype");
+  font-family: "Montserrat-Medium";
+  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 :root {
-  --default-font: "circular-std-medium-500", sans-serif;
-  --heading-font: "circular-std-medium-500", sans-serif;
-  --nav-font: "circular-std-medium-500" sans-serif;
+  --default-font: "Montserrat-Medium", sans-serif;
+  --heading-font: "Montserrat-SemiBold", sans-serif;
+  --nav-font: "Montserrat-SemiBold" sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
