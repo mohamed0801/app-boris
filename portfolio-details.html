@@ -53,28 +53,23 @@
         class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
       >
         <nav id="navmenu" class="navmenu">
-          <!-- Version desktop du menu avec logo au centre -->
+          <!-- Version desktop du menu avec logo à gauche -->
           <div class="nav-container">
-            <!-- Liens à gauche du logo -->
-            <div class="nav-left">
-              <ul>
-                <li><a href="index.html">Menu</a></li>
-                <li><a href="index.html">À Propos</a></li>
-                <li><a href="index.html">Méthodologie</a></li>
-              </ul>
-            </div>
-
-            <!-- Logo au milieu -->
+            <!-- Logo à gauche -->
             <div class="nav-logo">
               <a href="index.html" class="logo d-flex align-items-center">
                 <img src="assets/img/Logo-TRALAI.png" alt="" />
+                <!--  <h1 class="sitename">TRALAI</h1>-->
               </a>
             </div>
 
-            <!-- Liens à droite du logo -->
-            <div class="nav-right">
+            <!-- Tous les liens à droite du logo -->
+            <div class="nav-links">
               <ul>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="index.html">Services</a></li>
+                <li><a href="index.html">À Propos</a></li>
+                <li><a href="index.html">Méthodologie</a></li>
                 <li><a href="index.html">Portfolio</a></li>
                 <li><a href="index.html">Contact</a></li>
               </ul>
@@ -83,20 +78,20 @@
 
           <!-- Version mobile: bouton toggle à gauche et logo à droite -->
           <div class="mobile-header">
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             <div class="mobile-logo">
-              <a href="index.html" class="logo d-flex align-items-center">
+              <a href="index.html" class="d-flex align-items-center">
                 <img src="assets/img/Logo-TRALAI.png" alt="" />
               </a>
             </div>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </div>
 
           <!-- Liste pour la version mobile -->
           <ul>
-            <li><a href="index.html">Menu</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">Services</a></li>
             <li><a href="index.html">À Propos</a></li>
             <li><a href="index.html">Méthodologie</a></li>
-            <li><a href="index.html">Services</a></li>
             <li><a href="index.html">Portfolio</a></li>
             <li><a href="index.html">Contact</a></li>
           </ul>
@@ -106,29 +101,22 @@
 
     <main class="main">
       <!-- Page Title -->
-      <div class="page-title" data-aos="fade">
-        <!-- Éléments géométriques décoratifs -->
-        <div class="geometric-element circle"></div>
-        <div class="geometric-element square"></div>
-        <div class="geometric-element triangle"></div>
-
-        <div class="container position-relative">
-          <div class="title-container">
-            <h1><span>Nos Créations</span>Portfolio</h1>
-            <p>
-              Chaque création est pensée pour refléter l’image de marque de nos
-              clients, allier style et fonctionnalité, et renforcer l'identité
-              visuelle de leur entreprise. Nous mettons un point d’honneur à
-              proposer des solutions créatives, qualitatives et adaptées à
-              chaque besoin.
-            </p>
-            <nav class="breadcrumbs">
-              <ol>
-                <li><a href="index.html">Menu</a></li>
-                <li class="current">Portfolio Details</li>
-              </ol>
-            </nav>
-          </div>
+      <div class="contact-header">
+        <div class="contact-header-content">
+          <h1>Nos Créations</h1>
+          <p>
+            Chaque création est pensée pour refléter l’image de marque de nos
+            clients, allier style et fonctionnalité, et renforcer l'identité
+            visuelle de leur entreprise. Nous mettons un point d’honneur à
+            proposer des solutions créatives, qualitatives et adaptées à chaque
+            besoin.
+          </p>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Accueil</a></li>
+              <li class="current">Portfolio Details</li>
+            </ol>
+          </nav>
         </div>
       </div>
       <!-- End Page Title -->
