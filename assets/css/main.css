@@ -2335,7 +2335,7 @@ section,
   .cta-content p {
     font-size: 16px;
     margin-bottom: 25px;
-    text-align: left;
+    text-align: center;
     max-width: 100%; /* Pleine largeur sur mobile */
   }
 
