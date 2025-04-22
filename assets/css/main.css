@@ -2794,46 +2794,103 @@ section,
   color: white;
 }
 
-/* Responsive design amélioré */
 @media (max-width: 991px) {
   .service-details .services-list {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
+    display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
   }
 
   .service-details .services-list a {
-    width: calc(50% - 10px);
-    min-width: 180px;
+    width: auto;
+    min-width: auto;
+    height: auto;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2; /* Augmenté pour une meilleure lisibilité */
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50px;
+    background-color: #f1f1f1;
+    color: var(--default-color);
+    box-shadow: none;
+    border: none;
+    flex-direction: row;
+    align-items: center;
   }
-}
 
-@media (max-width: 767px) {
-  .service-details .services-list a {
-    width: calc(50% - 8px);
-    min-width: 160px;
-    height: 100px;
-    padding: 12px;
+  .service-details .services-list a:hover {
+    transform: none;
+    background-color: #e1e1e1;
+    box-shadow: none;
+  }
+
+  .service-details .services-list a.active {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
   }
 
   .service-details .services-list a i {
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
+    display: none;
   }
 }
 
+/* Ajustements pour petits écrans mobiles */
 @media (max-width: 575px) {
+  .service-details .services-list {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
   .service-details .services-list a {
-    width: 100%;
-    height: 90px;
-    padding: 10px;
-    font-size: 14px;
+    flex: 0 0 calc(50% - 8px); /* Deux liens par ligne */
+    max-width: calc(50% - 8px);
+    padding: 8px 12px;
+    font-size: 12px; /* Réduit pour s'assurer que le texte tient */
+    box-sizing: border-box;
+    white-space: normal; /* Permet au texte de passer à la ligne */
+    word-wrap: break-word; /* Coupe les mots longs si nécessaire */
+    height: auto; /* Ajuste la hauteur au contenu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.2;
+    min-height: 40px; /* Hauteur minimale pour l'uniformité */
   }
 
   .service-details .services-list a i {
-    font-size: 18px;
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
+    display: none;
+  }
+
+  /* Pour les très petits écrans, on réduit encore plus */
+  @media (max-width: 360px) {
+    .service-details .services-list {
+      gap: 6px;
+    }
+
+    .service-details .services-list a {
+      flex: 0 0 100%;
+      max-width: 100%;
+      font-size: 13px;
+      padding: 6px 10px;
+      min-height: 36px;
+    }
   }
 }
 
@@ -3059,7 +3116,7 @@ Devis section
   color: white;
   padding: 50px 20px;
   border-radius: var(--border-radius);
-  margin: 105px auto 60px; /* Garde la marge bas mais centre horizontalement */
+  margin: 105px auto 6px; /* Garde la marge bas mais centre horizontalement */
   max-width: 100%; /* Augmente la largeur maximale à 100% */
   width: 90%; /* Prend 100% de la largeur disponible */
   overflow: hidden;

@@ -393,7 +393,7 @@
         this.classList.add("active");
 
         // Récupérer le type de service depuis l'attribut data-service
-        const serviceKey = this.getAttribute("data-service");
+        let serviceKey = this.getAttribute("data-service");
 
         // Si aucun attribut data-service n'est trouvé, utiliser le texte du lien
         if (!serviceKey) {
@@ -401,7 +401,8 @@
 
           if (key.includes("tenues")) serviceKey = "tenues";
           else if (key.includes("goodies")) serviceKey = "goodies";
-          else if (key.includes("espaces")) serviceKey = "espaces";
+          else if (key.includes("espaces") || key.includes("aménagement"))
+            serviceKey = "espaces";
           else if (key.includes("événements") || key.includes("evenements"))
             serviceKey = "evenements";
         }
