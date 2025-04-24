@@ -2574,7 +2574,7 @@ section,
 /* Styles originaux desktop - inchangés */
 .portfolio .portfolio-item {
   position: relative;
-  margin-top: 1px !important;
+  margin-top: 0px !important;
 }
 
 .portfolio .portfolio-item .portfolio-info {
@@ -3143,7 +3143,7 @@ section,
 }
 
 .service-details h4 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -3160,7 +3160,6 @@ section,
 
 .service-details ul li {
   padding: 5px 0;
-  display: flex;
   align-items: center;
 }
 

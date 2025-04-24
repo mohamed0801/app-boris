@@ -329,15 +329,25 @@
           "Chez TRALAI, nous créons le design de vos polos, t-shirts ou chemises personnalisés, en lien avec votre logo ou en harmonie avec l'événement que vous organisez. En plus de la conception graphique, nous nous chargeons de l'impression des tenues, afin que vos collaborateurs ou invités portent fièrement l'image de votre entreprise.",
         subtitleOne: "Pourquoi choisir ce service ?",
         points: [
-          "Renforcer l'unité et l'appartenance : Des tenues personnalisées renforcent le sentiment d’appartenance à une entreprise et créent un environnement de travail cohésif.",
-          "Un impact visuel pour vos événements : Les tenues corporate adaptées à vos événements ajoutent une dimension professionnelle et marquent les esprits des invités et des collaborateurs.",
-          "Cohérence de marque : Avec des tenues adaptées à votre logo ou à l'événement, vous assurez une image uniforme et professionnelle, essentielle pour la reconnaissance de votre marque.",
+          "Des tenues personnalisées renforcent le sentiment d’appartenance à une entreprise et créent un environnement de travail cohésif.",
+          "Les tenues corporate adaptées à vos événements ajoutent une dimension professionnelle et marquent les esprits des invités et des collaborateurs.",
+          "Avec des tenues adaptées à votre logo ou à l'événement, vous assurez une image uniforme et professionnelle, essentielle pour la reconnaissance de votre marque.",
+        ],
+        strongs: [
+          "Renforcer l'unité et l'appartenance : ",
+          "Un impact visuel pour vos événements :",
+          "Cohérence de marque :",
         ],
         subtitleTwo: "Ce que vous obtenez :",
         pointsT: [
-          "Design sur-mesure : Création de modèles uniques adaptés à votre identité et àvos besoins spécifiques",
-          "Personnalisation complète : Intégration de votre logo, de slogans ou de motifs en lien avec l'événement",
-          "Impression professionnelle : Du design à l'impression, nous garantissons une qualité irréprochable pour chaque vêtement",
+          "Création de modèles uniques adaptés à votre identité et àvos besoins spécifiques",
+          "Intégration de votre logo, de slogans ou de motifs en lien avec l'événement",
+          "Du design à l'impression, nous garantissons une qualité irréprochable pour chaque vêtement",
+        ],
+        strongsT: [
+          "Design sur-mesure : ",
+          "Personnalisation complète : ",
+          "Impression professionnelle : ",
         ],
       },
       goodies: {
@@ -347,15 +357,25 @@
           "Nous imaginons et créons des goodies, objets publicitaires et accessoires personnalisés qui renforcent l'image de votre entreprise et marquent les esprits de vos collaborateurs et clients. Que ce soit pour un événement spécial ou comme élément permanent de votre communication, nous vous offrons des solutions uniques.",
         subtitleOne: "Pourquoi choisir ce service ?",
         points: [
-          "Renforcer l'image de marque : Offrez à vos collaborateurs et clients des objets uniques qui incarnent les valeurs et l'identité de votre entreprise.",
-          "Des créations mémorables : Nos goodies sont conçus pour avoir un impact durable, laissant une empreinte dans l'esprit de vos publics à travers des designs créatifs et originaux.",
-          "Communication efficace : Qu'il s'agisse de promouvoir un événement ou de communiquer de manière continue, les accessoires personnalisés sont des outils efficaces pour renforcer la visibilité et la reconnaissance de votre marque.",
+          "Offrez à vos collaborateurs et clients des objets uniques qui incarnent les valeurs et l'identité de votre entreprise.",
+          "Nos goodies sont conçus pour avoir un impact durable, laissant une empreinte dans l'esprit de vos publics à travers des designs créatifs et originaux.",
+          "Qu'il s'agisse de promouvoir un événement ou de communiquer de manière continue, les accessoires personnalisés sont des outils efficaces pour renforcer la visibilité et la reconnaissance de votre marque.",
+        ],
+        strongs: [
+          "Renforcer l'image de marque : ",
+          "Des créations mémorables : ",
+          "Communication efficace : ",
         ],
         subtitleTwo: "Ce que vous obtenez :",
         pointsT: [
-          "Personnalisation : chaque objet est conçu sur mesure, pour refléter vos valeurs et votre identité visuelle",
-          "Créativité : des designs originaux et innovants qui se démarquent",
+          "chaque objet est conçu sur mesure, pour refléter vos valeurs et votre identité visuelle",
+          "des designs originaux et innovants qui se démarquent",
           "Impact durable : des accessoires pratiques et esthétiques qui laissent une empreinte dans l'esprit de vos publics",
+        ],
+        strongsT: [
+          "Personnalisation : ",
+          "Des créations mémorables : ",
+          "Créativité : ",
         ],
       },
       espaces: {
@@ -365,15 +385,25 @@
           "Nous transformons vos bureaux et espaces de coworking pour qu'ils reflètent l'identité et les valeurs de votre entreprise. Chaque projet d'aménagement est conçu pour offrir un environnement de travail stimulant, fonctionnel et inspirant, en parfaite adéquation avec votre culture d'entreprise.",
         subtitleOne: "Pourquoi choisir ce service ?",
         points: [
-          "Optimisation de l’espace : Nous maximisons l’utilisation de votre espace pour créer des environnements pratiques, tout en mettant en valeur l'image et l'identité de votre entreprise.",
-          "Renforcer la culture d'entreprise : L'aménagement des espaces devient un véritable levier pour transmettre vos valeurs et inspirer vos équipes au quotidien.",
-          "Bien-être et productivité : Un cadre de travail bien conçu améliore l'engagement et la motivation des collaborateurs, tout en favorisant la collaboration et la créativité.",
+          "Nous maximisons l’utilisation de votre espace pour créer des environnements pratiques, tout en mettant en valeur l'image et l'identité de votre entreprise.",
+          "L'aménagement des espaces devient un véritable levier pour transmettre vos valeurs et inspirer vos équipes au quotidien.",
+          "Un cadre de travail bien conçu améliore l'engagement et la motivation des collaborateurs, tout en favorisant la collaboration et la créativité.",
+        ],
+        strongs: [
+          "Optimisation de l’espace : ",
+          "Renforcer la culture d'entreprise : ",
+          "Bien-être et productivité : ",
         ],
         subtitleTwo: "Ce que vous obtenez :",
         pointsT: [
-          "Design fonctionnel et esthétique : chaque espace est pensé pour optimiser l'usage tout en renforçant votre image",
-          "Ambiance sur mesure : création d'un environnement de travail inspirant qui motive vos équipes",
-          "Conseils experts : ergonomie, choix des matériaux, agencement et décoration adaptés à vos besoins",
+          "chaque espace est pensé pour optimiser l'usage tout en renforçant votre image",
+          "création d'un environnement de travail inspirant qui motive vos équipes",
+          "ergonomie, choix des matériaux, agencement et décoration adaptés à vos besoins",
+        ],
+        strongsT: [
+          "Design fonctionnel et esthétique : ",
+          "Ambiance sur mesure : ",
+          "Conseils experts : ",
         ],
       },
       evenements: {
@@ -383,15 +413,25 @@
           "Nous organisons des événements internes sur mesure, tels que des séminaires stratégiques, des ateliers de teambuilding ou des sessions de formation, pour créer des moments mémorables qui renforcent la cohésion de vos équipes et véhiculent les valeurs de votre entreprise.",
         subtitleOne: "Pourquoi choisir ce service ?",
         points: [
-          "Renforcer la cohésion d'équipe : Nos événements favorisent l'unité et la collaboration, en offrant des expériences qui rapprochent vos collaborateurs tout en renforçant leur engagement envers l'entreprise.",
-          "Célébrer et transmettre vos valeurs : Chaque événement est conçu pour refléter l'identité et les valeurs de votre entreprise, créant ainsi des moments où vos équipes se sentent connectées à la culture d'entreprise.",
-          "Un impact durable : Nos événements ne sont pas de simples rassemblements, mais des expériences immersives qui laissent une empreinte durable et stimulent la motivation des participants.",
+          "Nos événements favorisent l'unité et la collaboration, en offrant des expériences qui rapprochent vos collaborateurs tout en renforçant leur engagement envers l'entreprise.",
+          "Chaque événement est conçu pour refléter l'identité et les valeurs de votre entreprise, créant ainsi des moments où vos équipes se sentent connectées à la culture d'entreprise.",
+          "Nos événements ne sont pas de simples rassemblements, mais des expériences immersives qui laissent une empreinte durable et stimulent la motivation des participants.",
+        ],
+        strongs: [
+          "Renforcer la cohésion d'équipe : ",
+          "Célébrer et transmettre vos valeurs : ",
+          "Un impact durable : ",
         ],
         subtitleTwo: "Ce que vous obtenez :",
         pointsT: [
-          "Personnalisation : chaque événement est conçu pour répondre à vos objectifs spécifiques et à la culture de votre entreprise",
-          "Expériences immersives : des événements qui créent un impact durable grâce à des concepts originaux et adaptés",
-          "Gestion clé en main : de la conception à la réalisation, nous nous occupons de tous les aspects pour vous garantir une expérience réussie",
+          "chaque événement est conçu pour répondre à vos objectifs spécifiques et à la culture de votre entreprise",
+          "des événements qui créent un impact durable grâce à des concepts originaux et adaptés",
+          "de la conception à la réalisation, nous nous occupons de tous les aspects pour vous garantir une expérience réussie",
+        ],
+        strongsT: [
+          "Personnalisation : ",
+          "Expériences immersives : ",
+          "Gestion clé en main : ",
         ],
       },
     };
@@ -452,15 +492,15 @@
           //detailsSubTitleTwo.style.display = "block";
 
           detailsListOne.innerHTML = "";
-          service.points.forEach((point) => {
+          service.points.forEach((point, index) => {
             const li = document.createElement("li");
-            li.innerHTML = `<i class="bi bi-check-circle"></i><span>${point}</span>`;
+            li.innerHTML = `<i class="bi bi-check-circle"></i><strong>${service.strongs[index]}</strong><span>${point}</span>`;
             detailsListOne.appendChild(li);
           });
           detailsListTwo.innerHTML = "";
-          service.pointsT.forEach((point) => {
+          service.pointsT.forEach((point, index) => {
             const li = document.createElement("li");
-            li.innerHTML = `<i class="bi bi-check-circle"></i><span>${point}</span>`;
+            li.innerHTML = `<i class="bi bi-check-circle"></i><strong>${service.strongsT[index]}</strong><span>${point}</span>`;
             detailsListTwo.appendChild(li);
           });
 
