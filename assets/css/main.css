@@ -2674,7 +2674,7 @@ section,
     width: 50% !important;
     max-width: 50% !important;
     flex: 0 0 50% !important;
-    padding: 0 5px;
+    padding: 0 1px;
   }
 
   .portfolio .isotope-container {
@@ -2727,7 +2727,7 @@ section,
     width: 33.333% !important;
     max-width: 33.333% !important;
     flex: 0 0 33.333% !important;
-    padding: 0 3px;
+    padding: 0 1px;
   }
 
   .portfolio .isotope-container {
