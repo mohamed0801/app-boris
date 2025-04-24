@@ -2574,6 +2574,7 @@ section,
 /* Styles originaux desktop - inchangés */
 .portfolio .portfolio-item {
   position: relative;
+  margin-top: 5px !important;
 }
 
 .portfolio .portfolio-item .portfolio-info {
