@@ -2963,6 +2963,7 @@ section,
 # Service Details Section
 --------------------------------------------------------------*/
 /* Style moderne pour la liste de services détaillés en horizontal */
+
 .services-hero {
   padding: 0;
 }
@@ -2994,6 +2995,28 @@ section,
   );
   z-index: 2;
   border-radius: 15px;
+}
+
+.service-details h4 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.service-details ul {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+}
+
+.service-details ul li {
+  padding: 5px 0;
+  align-items: center;
+}
+
+.service-details ul i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: var(--accent-color);
 }
 
 .services-content {
@@ -3084,6 +3107,7 @@ section,
     font-size: 12px;
   }
 }
+
 .service-details .services-list {
   display: flex;
   flex-direction: row;
@@ -3235,45 +3259,27 @@ section,
   .service-details .services-list a i {
     display: none;
   }
-
-  /* Pour les très petits écrans, on réduit encore plus */
-  @media (max-width: 360px) {
-    .service-details .services-list {
-      gap: 6px;
-    }
-
-    .service-details .services-list a {
-      flex: 0 0 100%;
-      max-width: 100%;
-      font-size: 13px;
-      padding: 6px 10px;
-      min-height: 36px;
-    }
+  .service-details ul {
+    font-size: 12px;
   }
 }
 
-/* Le reste de votre CSS reste inchangé */
+/* Pour les très petits écrans, on réduit encore plus */
+@media (max-width: 360px) {
+  .service-details .services-list {
+    gap: 6px;
+  }
 
-.service-details h4 {
-  font-size: 17px;
-  font-weight: 500;
-}
-
-.service-details ul {
-  list-style: none;
-  padding: 0;
-  font-size: 16px;
-}
-
-.service-details ul li {
-  padding: 5px 0;
-  align-items: center;
-}
-
-.service-details ul i {
-  font-size: 20px;
-  margin-right: 8px;
-  color: var(--accent-color);
+  .service-details .services-list a {
+    flex: 0 0 100%;
+    max-width: 100%;
+    font-size: 13px;
+    padding: 6px 10px;
+    min-height: 36px;
+  }
+  .service-details ul {
+    font-size: 12px;
+  }
 }
 
 .cta-services-details-container {
