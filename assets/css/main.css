@@ -3169,176 +3169,143 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widgets-container {
-  background-color: var(--surface-color);
-  padding: 30px;
-  margin: 60px 0 30px 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+.cta-services-details-container {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
-.widget-title {
-  color: var(--heading-color);
-  font-size: 20px;
-  font-weight: 500;
-  padding: 0;
-  margin: 0 0 20px 0;
-}
-
-.widget-item {
-  margin-bottom: 40px;
-}
-
-.widget-item:last-child {
-  margin-bottom: 0;
-}
-
-.search-widget form {
-  background: var(--background-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 75%);
-  padding: 3px 10px;
+.cta-services-details-box {
+  background: linear-gradient(135deg, #f5f7fa 0%, #eef2f8 100%);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   position: relative;
-  border-radius: 50px;
-  transition: 0.3s;
-}
-
-.search-widget form input[type="text"] {
-  border: 0;
-  padding: 4px 10px;
-  border-radius: 4px;
-  width: calc(100% - 40px);
-  background-color: var(--background-color);
-  color: var(--default-color);
-}
-
-.search-widget form input[type="text"]:focus {
-  outline: none;
-}
-
-.search-widget form button {
-  background: none;
-  color: var(--default-color);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  font-size: 16px;
-  padding: 0 16px;
-  transition: 0.3s;
-  line-height: 0;
-}
-
-.search-widget form button i {
-  line-height: 0;
-}
-
-.search-widget form button:hover {
-  color: var(--accent-color);
-}
-
-.search-widget form:is(:focus-within) {
-  border-color: var(--accent-color);
-}
-
-.categories-widget ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.categories-widget ul li {
-  padding-bottom: 10px;
-}
-
-.categories-widget ul li:last-child {
-  padding-bottom: 0;
-}
-
-.categories-widget ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
-}
-
-.categories-widget ul a:hover {
-  color: var(--accent-color);
-}
-
-.categories-widget ul a span {
-  padding-left: 5px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 14px;
-}
-
-.recent-posts-widget .post-item {
+  overflow: hidden;
+  transition: transform 0.3s ease;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-services-details-box:hover {
+  transform: translateY(-5px);
+}
+
+.cta-services-details-box::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--accent-color, #4154f1);
+  opacity: 0.1;
+}
+
+.cta-services-details-content h3 {
+  font-size: 28px;
+  font-weight: 700;
   margin-bottom: 15px;
+  color: #333;
 }
 
-.recent-posts-widget .post-item:last-child {
-  margin-bottom: 0;
+.cta-services-details-content p {
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.recent-posts-widget .post-item img {
-  width: 80px;
-  margin-right: 15px;
+.cta-services-details-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-.recent-posts-widget .post-item h4 {
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 5px;
+.cta-services-details-btn-primary {
+  background: var(--accent-color, #4154f1);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-color, #4154f1);
 }
 
-.recent-posts-widget .post-item h4 a {
-  color: var(--default-color);
-  transition: 0.3s;
+.cta-services-details-btn-primary:hover {
+  color: white;
 }
 
-.recent-posts-widget .post-item h4 a:hover {
+.cta-services-details-btn-secondary {
+  background: transparent;
   color: var(--accent-color);
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-color);
 }
 
-.recent-posts-widget .post-item time {
-  display: block;
-  font-style: italic;
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+  .cta-services-details--box {
+    padding: 30px 20px;
+  }
+
+  .cta-services-details-content h3 {
+    font-size: 24px;
+  }
+
+  .cta-services-details-content p {
+    font-size: 15px;
+  }
+
+  .cta-services-details-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-services-details-btn-primary,
+  .cta-services-details-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-.tags-widget ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Version plus élégante pour les grands écrans */
+@media (min-width: 992px) {
+  .cta-services-details-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 50px;
+  }
+
+  .cta-services-details-content {
+    flex: 1;
+    margin-right: 30px;
+  }
+
+  .cta-services-details-content p {
+    margin-bottom: 0;
+  }
+
+  .cta-services-details-actions {
+    flex-shrink: 0;
+    margin-top: 0;
+  }
 }
 
-.tags-widget ul li {
-  display: inline-block;
-}
-
-.tags-widget ul a {
-  background-color: color-mix(in srgb, var(--default-color), transparent 94%);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  border-radius: 50px;
-  font-size: 14px;
-  padding: 5px 15px;
-  margin: 0 6px 8px 0;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.tags-widget ul a:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.tags-widget ul a span {
-  padding-left: 5px;
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-  font-size: 14px;
-}
 /**************************************************
 Devis section
 ***************************************************/
