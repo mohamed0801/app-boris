@@ -157,8 +157,8 @@ h6 {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0 0 0 var(--nav-spacing); /* Espacement à gauche uniquement */
-    justify-content: flex-start; /* Alignement des liens à gauche */
+
+    justify-content: flex-end; /* Alignement des liens à gauche */
   }
 
   /* Logo à gauche au lieu du centre */
