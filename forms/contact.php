@@ -1,41 +1,80 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+// Inclure l'autoloader de Composer
+require '../vendor/autoload.php';
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+// Importer les classes de PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+// Adresse email qui recevra les messages du formulaire
+$receiving_email_address = 'bhamalah@gmail.com';
 
- // $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
-
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
+// Vérification que la requête est bien en POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Définir l'en-tête pour une réponse JSON
+    header('Content-Type: application/json');
+    
+    // Vérification que tous les champs requis sont remplis
+    if(
+        !empty($_POST['name']) &&
+        !empty($_POST['email']) &&
+        !empty($_POST['subject']) &&
+        !empty($_POST['message'])
+    ) {
+        // Configuration du mail avec PHPMailer
+        $mail = new PHPMailer(true);
+                
+        try {
+            // Configuration du serveur
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.error.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'bhamalah@gmail.com';
+            $mail->Password   = 'oqof welh gjci rlxt';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port       = 587;
+            
+            // Désactiver le mode debug en production
+            $mail->SMTPDebug  = 0;
+            
+            // Destinataires
+            $mail->setFrom($_POST['email'], $_POST['name']);
+            $mail->addAddress($receiving_email_address);
+            $mail->addReplyTo($_POST['email'], $_POST['name']);
+            
+            // Contenu
+            $mail->isHTML(true);
+            $mail->Subject = $_POST['subject'];
+            
+            // Corps du message
+            $body = "De: " . htmlspecialchars($_POST['name']) . "<br>";
+            $body .= "Email: " . htmlspecialchars($_POST['email']) . "<br><br>";
+            $body .= "Message:<br>" . nl2br(htmlspecialchars($_POST['message']));
+            
+            $mail->Body = $body;
+            
+            // Envoi du mail
+            $mail->send();
+            
+            // Réponse en cas de succès
+            echo json_encode(['success' => true, 'message' => 'Votre message a été envoyé. Merci !']);
+            
+        } catch (Exception $e) {
+            // Réponse en cas d'erreur et (a ajouter pour debbuger Erreur: {$mail->ErrorInfo})
+            echo json_encode(['success' => false, 'message' => "Oups ! Une erreur est survenue. Veuillez réessayer un peu plus tard. "]);
+        }
+    } else {
+        // Si des champs sont manquants
+        echo json_encode(['success' => false, 'message' => 'Veuillez remplir tous les champs du formulaire.']);
+    }
+} else {
+    // Si la méthode n'est pas POST
+    echo json_encode(['success' => false, 'message' => 'Méthode non autorisée.']);
+}
 ?>
+
+
+
+
+

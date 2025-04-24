@@ -91,58 +91,6 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -336,7 +284,7 @@ h6 {
 .footer {
   color: var(--default-color);
   background-color: #faf8f5; /*var(--background-color);*/
-  font-size: 13px;
+  font-size: 11px;
   position: relative;
 }
 
@@ -477,6 +425,60 @@ h6 {
 .footer .footer-newsletter .newsletter-form input[type="submit"]:hover {
   background: #d17a54;
 }
+/* Style pour l'indicateur de chargement */
+.footer-newsletter .loading {
+  display: none;
+  background: #f8f9fa;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.footer-newsletter .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #e67e22;
+  border-top-color: #f8f9fa;
+  animation: form-loading-animation 1s linear infinite;
+}
+
+@keyframes form-loading-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Style pour le message d'erreur */
+.footer-newsletter .error-message {
+  display: none;
+  background: #df1529;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Style pour le message de succès */
+.footer-newsletter .success-message {
+  display: none;
+  background: #059652;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-weight: 600;
+}
 
 .footer .copyright {
   padding: 25px 0;
@@ -535,7 +537,7 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
+  right: 10px;
   bottom: 15px;
   z-index: 99999;
   background-color: var(--accent-color);
@@ -879,7 +881,7 @@ section,
 .hero-container {
   width: 90%; /* Augmenté à 90% pour une image plus grande */
   max-width: 1400px; /* Pour limiter sur très grands écrans */
-  margin: 115px 0 0 0;
+  margin: 100px 0 0 0;
 }
 
 .hero-image {
@@ -1132,7 +1134,6 @@ section,
   border: 1px solid rgba(var(--accent-rgb), 0.3);
   top: 0;
   left: 0;
-  animation: pulse 2s infinite;
 }
 
 .value-icon i {
@@ -2587,7 +2588,7 @@ section,
 }
 
 .contact .info-item h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   margin: 20px 0;
 }
@@ -2598,66 +2599,97 @@ section,
   font-size: 14px;
 }
 
-@media (min-width: 992px) {
-  .contact .info-item.info-item-borders {
-    border-left: 1px solid
-      color-mix(in srgb, var(--default-color), transparent 85%);
-    border-right: 1px solid
-      color-mix(in srgb, var(--default-color), transparent 85%);
-  }
-}
+/* Styles généraux du formulaire */
 
-.contact .php-email-form {
+.contact-form {
   background-color: var(--light-bg);
   padding: 30px;
-  margin-top: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  margin-top: 50px;
 }
 
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
+/* Styles des champs de formulaire */
+.contact-form .form-control {
+  border-radius: 4px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: var(--default-color);
+}
+
+/* Bouton d'envoi */
+.contact-form .submit-button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Messages d'état */
+.contact-form .form-status {
+  margin-bottom: 20px;
+}
+
+/* Style pour l'indicateur de chargement */
+.contact-form .loading {
+  display: none;
+  background: #f8f9fa;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.contact-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #e67e22;
+  border-top-color: #f8f9fa;
+  animation: form-loading-animation 1s linear infinite;
+}
+
+@keyframes form-loading-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-.contact .php-email-form input[type="text"],
-.contact .php-email-form input[type="email"],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(
-    in srgb,
-    var(--background-color),
-    transparent 50%
-  );
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+/* Style pour le message d'erreur */
+.contact-form .error-message {
+  display: none;
+  background: #df1529;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
-.contact .php-email-form input[type="text"]:focus,
-.contact .php-email-form input[type="email"]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type="text"]::placeholder,
-.contact .php-email-form input[type="email"]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.contact .php-email-form button[type="submit"] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 10px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-  background: #d17a54;
+/* Style pour le message de succès */
+.contact-form .success-message {
+  display: none;
+  background: #059652;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
 /*--------------------------------------------------------------
@@ -3300,7 +3332,7 @@ Devis section
   color: white;
 }
 
-/* Section Formulaire */
+/* Section Formulaire DEVIS */
 .form-section {
   background-color: var(--light-bg);
   padding: 50px 20px;
@@ -3333,7 +3365,7 @@ Devis section
 
 .form-control:focus {
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(224, 93, 47, 0.2);
+  box-shadow: none;
 }
 
 textarea.form-control {
@@ -3377,4 +3409,154 @@ textarea.form-control {
 .form-check-input:checked {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
+}
+/************************************************
+Whatsapp Button
+************************************************/
+.whatsapp-container {
+  position: fixed;
+  bottom: 70px;
+  right: 1px;
+  z-index: 9999;
+}
+
+.whatsapp-float {
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  transform: scale(1.1);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background-color: #333;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.whatsapp-tooltip:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 25px;
+  border: 5px solid transparent;
+  border-top-color: #333;
+}
+
+.whatsapp-container:hover .whatsapp-tooltip {
+  opacity: 1;
+}
+
+.whatsapp-popup {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: none;
+  overflow: hidden;
+}
+
+.popup-header {
+  background-color: #fff0eb;
+  color: var(--accent-color);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-header h4 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--accent-color);
+}
+
+.popup-close {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background-color: white;
+  color: var(--accent-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid var(--accent-color);
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Animation pulsation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Rendre le bouton plus petit sur mobile */
+@media screen and (max-width: 767px) {
+  .whatsapp-tooltip {
+    display: none;
+  }
+
+  .whatsapp-container {
+    right: 5px;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+  }
+
+  .whatsapp-popup {
+    width: 260px;
+    bottom: 70px;
+  }
 }

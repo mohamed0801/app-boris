@@ -26,19 +26,19 @@
 
     <!-- Vendor CSS Files -->
     <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      href="assets/vendors/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      href="assets/vendors/bootstrap-icons/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendors/aos/aos.css" rel="stylesheet" />
     <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
+      href="assets/vendors/glightbox/css/glightbox.min.css"
       rel="stylesheet"
     />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
@@ -166,7 +166,38 @@
                 que vos collaborateurs ou invités portent fièrement l'image de
                 votre entreprise.
               </p>
-              <ul>
+              <h4 class="subtitle-one">Pourquoi choisir ce service ?</h4>
+              <ul class="list-one">
+                <li>
+                  <i class="bi bi-check-circle"></i
+                  ><span
+                    >Renforcer l'unité et l'appartenance : Des tenues
+                    personnalisées renforcent le sentiment d’appartenance à une
+                    entreprise et créent un environnement de travail
+                    cohésif.</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i
+                  ><span
+                    >Un impact visuel pour vos événements : Les tenues corporate
+                    adaptées à vos événements ajoutent une dimension
+                    professionnelle et marquent les esprits des invités et des
+                    collaborateurs.</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i
+                  ><span
+                    >Cohérence de marque : Avec des tenues adaptées à votre logo
+                    ou à l'événement, vous assurez une image uniforme et
+                    professionnelle, essentielle pour la reconnaissance de votre
+                    marque.</span
+                  >
+                </li>
+              </ul>
+              <h4 class="subtitle-two">Ce que vous obtenez :</h4>
+              <ul class="list-two">
                 <li>
                   <i class="bi bi-check-circle"></i
                   ><span
@@ -258,11 +289,7 @@
               Abonnez-vous à notre newsletter et recevez les dernières
               actualités sur nos produits et services !
             </p>
-            <form
-              action="forms/newsletter.php"
-              method="post"
-              class="php-email-form"
-            >
+            <form action="forms/newsletter.php" method="post" id="newsletter">
               <div class="newsletter-form">
                 <input type="email" name="email" /><input
                   type="submit"
@@ -271,7 +298,7 @@
               </div>
               <div class="loading">Loading</div>
               <div class="error-message"></div>
-              <div class="sent-message">
+              <div class="success-message">
                 Votre demande d'abonnement a été envoyée. Merci !
               </div>
             </form>
@@ -299,16 +326,15 @@
     <!-- Preloader -->
     <div id="preloader"></div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
+    <!-- Vendors JS Files -->
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/php-email-form/validate.js"></script>
+    <script src="assets/vendors/aos/aos.js"></script>
+    <script src="assets/vendors/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendors/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendors/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>

@@ -1,11 +1,3 @@
-/**
- * Template Name: BizPage
- * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
- * Updated: Aug 07 2024 with Bootstrap v5.3.3
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
-
 (function () {
   "use strict";
 
@@ -335,10 +327,17 @@
         image: "assets/img/services.jpg",
         description:
           "Chez TRALAI, nous créons le design de vos polos, t-shirts ou chemises personnalisés, en lien avec votre logo ou en harmonie avec l'événement que vous organisez. En plus de la conception graphique, nous nous chargeons de l'impression des tenues, afin que vos collaborateurs ou invités portent fièrement l'image de votre entreprise.",
+        subtitleOne: "Pourquoi choisir ce service ?",
         points: [
-          "Design sur-mesure : création de modèles uniques adaptés à votre identité et à vos besoins spécifiques",
-          "Personnalisation complète : intégration de votre logo, de slogans ou de motifs en lien avec l'événement",
-          "Impression professionnelle : du design à l'impression, nous garantissons une qualité irréprochable pour chaque vêtement",
+          "Renforcer l'unité et l'appartenance : Des tenues personnalisées renforcent le sentiment d’appartenance à une entreprise et créent un environnement de travail cohésif.",
+          "Un impact visuel pour vos événements : Les tenues corporate adaptées à vos événements ajoutent une dimension professionnelle et marquent les esprits des invités et des collaborateurs.",
+          "Cohérence de marque : Avec des tenues adaptées à votre logo ou à l'événement, vous assurez une image uniforme et professionnelle, essentielle pour la reconnaissance de votre marque.",
+        ],
+        subtitleTwo: "Ce que vous obtenez :",
+        pointsT: [
+          "Design sur-mesure : Création de modèles uniques adaptés à votre identité et àvos besoins spécifiques",
+          "Personnalisation complète : Intégration de votre logo, de slogans ou de motifs en lien avec l'événement",
+          "Impression professionnelle : Du design à l'impression, nous garantissons une qualité irréprochable pour chaque vêtement",
         ],
       },
       goodies: {
@@ -346,7 +345,14 @@
         image: "assets/img/services.jpg",
         description:
           "Nous imaginons et créons des goodies, objets publicitaires et accessoires personnalisés qui renforcent l'image de votre entreprise et marquent les esprits de vos collaborateurs et clients. Que ce soit pour un événement spécial ou comme élément permanent de votre communication, nous vous offrons des solutions uniques.",
+        subtitleOne: "Pourquoi choisir ce service ?",
         points: [
+          "Renforcer l'image de marque : Offrez à vos collaborateurs et clients des objets uniques qui incarnent les valeurs et l'identité de votre entreprise.",
+          "Des créations mémorables : Nos goodies sont conçus pour avoir un impact durable, laissant une empreinte dans l'esprit de vos publics à travers des designs créatifs et originaux.",
+          "Communication efficace : Qu'il s'agisse de promouvoir un événement ou de communiquer de manière continue, les accessoires personnalisés sont des outils efficaces pour renforcer la visibilité et la reconnaissance de votre marque.",
+        ],
+        subtitleTwo: "Ce que vous obtenez :",
+        pointsT: [
           "Personnalisation : chaque objet est conçu sur mesure, pour refléter vos valeurs et votre identité visuelle",
           "Créativité : des designs originaux et innovants qui se démarquent",
           "Impact durable : des accessoires pratiques et esthétiques qui laissent une empreinte dans l'esprit de vos publics",
@@ -357,7 +363,14 @@
         image: "assets/img/services.jpg",
         description:
           "Nous transformons vos bureaux et espaces de coworking pour qu'ils reflètent l'identité et les valeurs de votre entreprise. Chaque projet d'aménagement est conçu pour offrir un environnement de travail stimulant, fonctionnel et inspirant, en parfaite adéquation avec votre culture d'entreprise.",
+        subtitleOne: "Pourquoi choisir ce service ?",
         points: [
+          "Optimisation de l’espace : Nous maximisons l’utilisation de votre espace pour créer des environnements pratiques, tout en mettant en valeur l'image et l'identité de votre entreprise.",
+          "Renforcer la culture d'entreprise : L'aménagement des espaces devient un véritable levier pour transmettre vos valeurs et inspirer vos équipes au quotidien.",
+          "Bien-être et productivité : Un cadre de travail bien conçu améliore l'engagement et la motivation des collaborateurs, tout en favorisant la collaboration et la créativité.",
+        ],
+        subtitleTwo: "Ce que vous obtenez :",
+        pointsT: [
           "Design fonctionnel et esthétique : chaque espace est pensé pour optimiser l'usage tout en renforçant votre image",
           "Ambiance sur mesure : création d'un environnement de travail inspirant qui motive vos équipes",
           "Conseils experts : ergonomie, choix des matériaux, agencement et décoration adaptés à vos besoins",
@@ -368,7 +381,14 @@
         image: "assets/img/services.jpg",
         description:
           "Nous organisons des événements internes sur mesure, tels que des séminaires stratégiques, des ateliers de teambuilding ou des sessions de formation, pour créer des moments mémorables qui renforcent la cohésion de vos équipes et véhiculent les valeurs de votre entreprise.",
+        subtitleOne: "Pourquoi choisir ce service ?",
         points: [
+          "Renforcer la cohésion d'équipe : Nos événements favorisent l'unité et la collaboration, en offrant des expériences qui rapprochent vos collaborateurs tout en renforçant leur engagement envers l'entreprise.",
+          "Célébrer et transmettre vos valeurs : Chaque événement est conçu pour refléter l'identité et les valeurs de votre entreprise, créant ainsi des moments où vos équipes se sentent connectées à la culture d'entreprise.",
+          "Un impact durable : Nos événements ne sont pas de simples rassemblements, mais des expériences immersives qui laissent une empreinte durable et stimulent la motivation des participants.",
+        ],
+        subtitleTwo: "Ce que vous obtenez :",
+        pointsT: [
           "Personnalisation : chaque événement est conçu pour répondre à vos objectifs spécifiques et à la culture de votre entreprise",
           "Expériences immersives : des événements qui créent un impact durable grâce à des concepts originaux et adaptés",
           "Gestion clé en main : de la conception à la réalisation, nous nous occupons de tous les aspects pour vous garantir une expérience réussie",
@@ -379,7 +399,15 @@
     const detailsImg = document.querySelector(".services-img");
     const detailsTitle = document.querySelector("#service-details h3");
     const detailsDesc = document.querySelector("#service-details p");
-    const detailsList = document.querySelector("#service-details ul");
+    const detailsSubTitleOne = document.querySelector(
+      "#service-details .subtitle-one"
+    );
+    console.log(detailsSubTitleOne);
+    const detailsSubTitleTwo = document.querySelector(
+      "#service-details .subtitle-two"
+    );
+    const detailsListOne = document.querySelector("#service-details .list-one");
+    const detailsListTwo = document.querySelector("#service-details .list-two");
 
     serviceLinks.forEach((link) => {
       link.addEventListener("click", function (e) {
@@ -418,12 +446,22 @@
           detailsImg.src = service.image;
           detailsTitle.textContent = service.title;
           detailsDesc.textContent = service.description;
+          detailsSubTitleOne.textContent = service.subtitleOne;
+          detailsSubTitleTwo.textContent = service.subtitleTwo;
+          //detailsSubTitleOne.style.display = "block";
+          //detailsSubTitleTwo.style.display = "block";
 
-          detailsList.innerHTML = "";
+          detailsListOne.innerHTML = "";
           service.points.forEach((point) => {
             const li = document.createElement("li");
             li.innerHTML = `<i class="bi bi-check-circle"></i><span>${point}</span>`;
-            detailsList.appendChild(li);
+            detailsListOne.appendChild(li);
+          });
+          detailsListTwo.innerHTML = "";
+          service.pointsT.forEach((point) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<i class="bi bi-check-circle"></i><span>${point}</span>`;
+            detailsListTwo.appendChild(li);
           });
 
           fadeTarget.style.opacity = 1;
@@ -687,4 +725,244 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Décommentez cette ligne si vous voulez ajouter des boutons pour changer les images
   // createPortfolioChangeButtons();
+});
+
+/********************************************
+ * Whatsapp Button
+ * ******************************************/
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappButton = document.getElementById("whatsappButton");
+  const whatsappPopup = document.getElementById("whatsappPopup");
+  const popupClose = document.querySelector(".popup-close");
+  const whatsappClose = document.querySelector(".whatsapp-close");
+  const whatsappContainer = document.querySelector(".whatsapp-container");
+
+  // Ouvrir/fermer la popup au clic sur le bouton
+  whatsappButton.addEventListener("click", function () {
+    whatsappPopup.style.display =
+      whatsappPopup.style.display === "block" ? "none" : "block";
+  });
+
+  // Fermer la popup au clic sur la croix
+  popupClose.addEventListener("click", function () {
+    whatsappPopup.style.display = "none";
+  });
+
+  // Fermer complètement le bouton WhatsApp
+  whatsappClose.addEventListener("click", function () {
+    whatsappContainer.style.display = "none";
+
+    // Stocker dans localStorage pour garder fermé jusqu'au prochain rechargement
+    localStorage.setItem("whatsappClosed", "true");
+  });
+
+  // Vérifier si le bouton a été fermé précédemment
+  if (localStorage.getItem("whatsappClosed") === "true") {
+    whatsappContainer.style.display = "none";
+  }
+});
+
+/*********************************************************
+ * Contact Form *
+ * *****************************************************/
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contact-form");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Éléments d'interface
+      const loadingElement = contactForm.querySelector(".loading");
+      const errorElement = contactForm.querySelector(".error-message");
+      const successElement = contactForm.querySelector(".success-message");
+      const submitButton = contactForm.querySelector(".submit-button");
+
+      // Réinitialiser l'affichage
+      loadingElement.style.display = "block";
+      errorElement.style.display = "none";
+      successElement.style.display = "none";
+      submitButton.disabled = true;
+
+      // Préparer les données
+      const formData = new FormData(contactForm);
+
+      // Envoyer la requête AJAX
+      fetch("forms/contact.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Erreur réseau - Status: " + response.status);
+          }
+          return response.text();
+        })
+        .then((text) => {
+          console.log("Réponse brute du serveur:", text);
+
+          try {
+            const data = JSON.parse(text);
+
+            // Cacher le chargement
+            loadingElement.style.display = "none";
+
+            if (data.success === true) {
+              // Afficher le message de succès
+              successElement.style.display = "block";
+              contactForm.reset();
+
+              // Masquer le message après 5 secondes
+              setTimeout(() => {
+                successElement.style.display = "none";
+              }, 5000);
+            } else {
+              // Afficher le message d'erreur
+              errorElement.textContent =
+                data.message || "Une erreur s'est produite";
+              errorElement.style.display = "block";
+              contactForm.reset();
+
+              // Masquer le message après 5 secondes
+              setTimeout(() => {
+                errorElement.style.display = "none";
+              }, 5000);
+            }
+          } catch (error) {
+            console.error("Erreur de parsing JSON:", error);
+            // Afficher une erreur générique
+            loadingElement.style.display = "none";
+            errorElement.textContent =
+              "Erreur de communication avec le serveur";
+            errorElement.style.display = "block";
+            contactForm.reset();
+
+            // Masquer le message après 5 secondes
+            setTimeout(() => {
+              errorElement.style.display = "none";
+            }, 5000);
+          }
+
+          // Réactiver le bouton
+          submitButton.disabled = false;
+        })
+        .catch((error) => {
+          console.error("Erreur AJAX:", error);
+
+          // Cacher le chargement et afficher l'erreur
+          loadingElement.style.display = "none";
+          errorElement.textContent =
+            "Une erreur s'est produite lors de l'envoi: " + error.message;
+          errorElement.style.display = "block";
+          contactForm.reset();
+
+          // Masquer le message après 5 secondes
+          setTimeout(() => {
+            errorElement.style.display = "none";
+          }, 5000);
+
+          // Réactiver le bouton
+          submitButton.disabled = false;
+        });
+    });
+  }
+});
+/*********************************************************
+ * Newsletter form  *
+ * *****************************************************/
+document.addEventListener("DOMContentLoaded", function () {
+  const newsletter = document.getElementById("newsletter");
+
+  if (newsletter) {
+    newsletter.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Éléments d'interface
+      const loadingElement = newsletter.querySelector(".loading");
+      const errorElement = newsletter.querySelector(".error-message");
+      const successElement = newsletter.querySelector(".success-message");
+      const submitButton = newsletter.querySelector('input[type="submit"]');
+
+      // Réinitialiser l'affichage
+      loadingElement.style.display = "block";
+      errorElement.style.display = "none";
+      successElement.style.display = "none";
+      submitButton.disabled = true;
+
+      // Préparer les données
+      const formData = new FormData(newsletter);
+
+      // Envoyer la requête AJAX
+      fetch("forms/newsletter.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Erreur réseau - Status: " + response.status);
+          }
+          return response.text();
+        })
+        .then((text) => {
+          console.log("Réponse brute du serveur:", text);
+
+          try {
+            const data = JSON.parse(text);
+
+            // Cacher le chargement
+            loadingElement.style.display = "none";
+
+            if (data.success === true) {
+              // Afficher le message de succès
+              successElement.style.display = "block";
+              newsletter.reset();
+
+              // Masquer le message après 5 secondes
+              setTimeout(() => {
+                successElement.style.display = "none";
+              }, 5000);
+            } else {
+              // Afficher le message d'erreur
+              errorElement.textContent =
+                data.message || "Une erreur s'est produite";
+              errorElement.style.display = "block";
+              newsletter.reset();
+
+              // Masquer le message après 5 secondes
+              setTimeout(() => {
+                errorElement.style.display = "none";
+              }, 5000);
+            }
+          } catch (error) {
+            console.error("Erreur de parsing JSON:", error);
+            // Afficher une erreur générique
+            loadingElement.style.display = "none";
+            errorElement.textContent =
+              "Erreur de communication avec le serveur";
+            errorElement.style.display = "block";
+            newsletter.reset();
+
+            // Masquer le message après 5 secondes
+            setTimeout(() => {
+              error.style.display = "none";
+            }, 5000);
+          }
+
+          // Réactiver le bouton
+          submitButton.disabled = false;
+        })
+        .catch((error) => {
+          console.error("Erreur AJAX:", error);
+
+          // Cacher le chargement et afficher l'erreur
+          loadingElement.style.display = "none";
+          errorElement.textContent =
+            "Une erreur s'est produite lors de l'envoi: " + error.message;
+          errorElement.style.display = "block";
+
+          // Réactiver le bouton
+          submitButton.disabled = false;
+        });
+    });
+  }
 });
