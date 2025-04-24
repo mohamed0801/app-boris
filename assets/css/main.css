@@ -2960,6 +2960,127 @@ section,
 # Service Details Section
 --------------------------------------------------------------*/
 /* Style moderne pour la liste de services détaillés en horizontal */
+.services-hero {
+  padding: 0;
+}
+
+.services-image-container {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  margin-bottom: 40px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.services-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.services-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 2;
+  border-radius: 15px;
+}
+
+.services-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+  z-index: 3;
+  color: #fff;
+}
+
+.services-content h3 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 110%;
+  letter-spacing: -0.5px;
+  animation: fadeInDown 1s both;
+}
+
+.services-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+  color: #fff;
+  animation: fadeInDown 1s both 0.2s;
+}
+
+.services-infos {
+  padding: 20px 0;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .services-content {
+    width: 60%;
+  }
+
+  .services-content h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-image-container {
+    height: 50vh;
+  }
+
+  .services-content {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  .services-content h3 {
+    font-size: 26px;
+  }
+
+  .services-content p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-image-container {
+    height: 55vh;
+  }
+
+  .services-content {
+    width: 80%;
+  }
+
+  .services-content h3 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  .services-content p {
+    font-size: 12px;
+  }
+}
 .service-details .services-list {
   display: flex;
   flex-direction: row;
@@ -3129,27 +3250,10 @@ section,
 }
 
 /* Le reste de votre CSS reste inchangé */
-.service-details .services-img {
-  margin-bottom: 20px;
-  display: block;
-  max-width: 100%;
-}
-
-.service-details h3 {
-  font-size: 24px;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 20px;
-}
 
 .service-details h4 {
   font-size: 18px;
   font-weight: 500;
-}
-
-.service-details p {
-  font-size: 16px;
-  text-align: justify;
 }
 
 .service-details ul {

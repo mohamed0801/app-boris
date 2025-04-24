@@ -326,7 +326,7 @@
           "Design personnalisé et impression de tenues qui incarnent votre identité",
         image: "assets/img/services.jpg",
         description:
-          "Chez TRALAI, nous créons le design de vos polos, t-shirts ou chemises personnalisés, en lien avec votre logo ou en harmonie avec l'événement que vous organisez. En plus de la conception graphique, nous nous chargeons de l'impression des tenues, afin que vos collaborateurs ou invités portent fièrement l'image de votre entreprise.",
+          "TRALAI conçoit et imprime des tenues personnalisées (polos, t-shirts, chemises) alignées avec votre logo ou votre événement, pour refléter fièrement l’image de votre entreprise.",
         subtitleOne: "Pourquoi choisir ce service ?",
         points: [
           "Des tenues personnalisées renforcent le sentiment d’appartenance à une entreprise et créent un environnement de travail cohésif.",
@@ -354,7 +354,7 @@
         title: "Création de goodies et accessoires impactants",
         image: "assets/img/services.jpg",
         description:
-          "Nous imaginons et créons des goodies, objets publicitaires et accessoires personnalisés qui renforcent l'image de votre entreprise et marquent les esprits de vos collaborateurs et clients. Que ce soit pour un événement spécial ou comme élément permanent de votre communication, nous vous offrons des solutions uniques.",
+          "Nous créons des goodies et objets publicitaires personnalisés pour valoriser votre image et marquer durablement vos clients et collaborateurs.",
         subtitleOne: "Pourquoi choisir ce service ?",
         points: [
           "Offrez à vos collaborateurs et clients des objets uniques qui incarnent les valeurs et l'identité de votre entreprise.",
@@ -382,7 +382,7 @@
         title: "Aménagement d'espaces de travail qui inspirent",
         image: "assets/img/services.jpg",
         description:
-          "Nous transformons vos bureaux et espaces de coworking pour qu'ils reflètent l'identité et les valeurs de votre entreprise. Chaque projet d'aménagement est conçu pour offrir un environnement de travail stimulant, fonctionnel et inspirant, en parfaite adéquation avec votre culture d'entreprise.",
+          "Nous aménageons vos bureaux pour refléter votre identité et offrir un espace de travail fonctionnel, stimulant et aligné avec votre culture d’entreprise.",
         subtitleOne: "Pourquoi choisir ce service ?",
         points: [
           "Nous maximisons l’utilisation de votre espace pour créer des environnements pratiques, tout en mettant en valeur l'image et l'identité de votre entreprise.",
@@ -410,7 +410,7 @@
         title: "Organisation d'événements internes marquants",
         image: "assets/img/services.jpg",
         description:
-          "Nous organisons des événements internes sur mesure, tels que des séminaires stratégiques, des ateliers de teambuilding ou des sessions de formation, pour créer des moments mémorables qui renforcent la cohésion de vos équipes et véhiculent les valeurs de votre entreprise.",
+          "Nous créons des expériences internes uniques, pensées pour souder vos équipes, stimuler l’engagement et faire vivre les valeurs de votre entreprise.",
         subtitleOne: "Pourquoi choisir ce service ?",
         points: [
           "Nos événements favorisent l'unité et la collaboration, en offrant des expériences qui rapprochent vos collaborateurs tout en renforçant leur engagement envers l'entreprise.",
